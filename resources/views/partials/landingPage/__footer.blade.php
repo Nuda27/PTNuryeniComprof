@@ -3,16 +3,17 @@
        <div class="container py-5">
            <div class="row g-5">
                <div class="col-lg-3 col-md-6">
-                   <h5 class="text-white mb-4">Nuryeni</h5>
-                   <p>Perusahaan yang bergerak di bidang sewa rental alat berat dan mobilisasi (transportasi) alat berat, sudah dipercaya sejak 2011.</p>
+                   <h5 class="text-white mb-4">PT. Nuryeni</h5>
+                   <img src="{{ asset('logo/nyn.png') }}" alt="nyn" class="mb-2" width="75">
+                   <p>PT. Nuryeni adalah sebuah perusahaan yang bergerak dibidang Waste (LB3) management mulai dari penyewaan alat berat dll</p>
+
                </div>
                <div class="col-lg-3 col-md-6">
                    <h5 class="text-white mb-4">Quick Links</h5>
-                   <a class="btn btn-link" href="">About Us</a>
-                   <a class="btn btn-link" href="">Contact Us</a>
-                   <a class="btn btn-link" href="">Our Services</a>
-                   <a class="btn btn-link" href="">Terms & Condition</a>
-                   <a class="btn btn-link" href="">Support</a>
+                   <a class="btn btn-link" href="/#about">About</a>
+                   <a class="btn btn-link" href="/#service">Services</a>
+                   <a class="btn btn-link" href="/contact">Contact</a>
+
                </div>
                <div class="col-lg-3 col-md-6">
                    <h5 class="text-white mb-4">Business Hours</h5>

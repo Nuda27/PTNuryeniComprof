@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('pages.admin.dashboard.index');
-});
+// Route::get('/', function () {
+//     return view('pages.admin.dashboard.index');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,3 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+// LANDING PAGE
+Route::get('/', [LandingPageController::class, 'index'])->name('home.index');
+Route::get('/contact', [LandingPageController::class, 'contact'])->name('contact.index');

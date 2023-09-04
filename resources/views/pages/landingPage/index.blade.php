@@ -56,7 +56,7 @@ Nuryeni
 
 
 <!-- About Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="about">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6">
@@ -242,7 +242,7 @@ Nuryeni
 
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="service">
     <div class="container">
         <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>

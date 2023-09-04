@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -19,9 +20,13 @@ use Illuminate\Support\Facades\Route;
 //     return view('pages.admin.dashboard.index');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,8 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
-
 // LANDING PAGE
 Route::get('/', [LandingPageController::class, 'index'])->name('home.index');
 Route::get('/contact', [LandingPageController::class, 'contact'])->name('contact.index');
+
+require __DIR__ . '/auth.php';

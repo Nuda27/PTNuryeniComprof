@@ -101,5 +101,7 @@
 
     <!-- Page JS -->
 
+
+    @stack('scripts')
 </body>
 </html>

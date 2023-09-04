@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <!-- Page CSS -->
+    <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/css/pages/page-auth.css') }}" />
 
     <!-- Helpers -->
     <script src="{{ asset('assetsAdmin/vendor/js/helpers.js') }}"></script>
@@ -40,46 +41,10 @@
 </head>
 
 <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-content-navbar">
-        <div class="layout-container">
 
-            <!-- Menu -->
-            @include('partials.admin.__sidebar')
-            <!-- / Menu -->
-
-            <!-- Layout container -->
-            <div class="layout-page">
-
-                <!-- Navbar -->
-                @include('partials.admin.__navbar')
-                <!-- / Navbar -->
-
-                <!-- Content wrapper -->
-                <div class="content-wrapper">
-
-                    <!-- Content -->
-                    <div class="container-xxl flex-grow-1 container-p-y">
-                        @yield('content')
-                    </div>
-                    <!-- / Content -->
-
-                    <!-- Footer -->
-                    @include('partials.admin.__footer')
-                    <!-- / Footer -->
-
-                    <div class="content-backdrop fade"></div>
-                </div>
-                <!-- Content wrapper -->
-            </div>
-            <!-- / Layout page -->
-        </div>
-
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
-
+    <!-- Content -->
+    @yield('content')
+    <!-- / Content -->
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -97,6 +62,7 @@
     <script src="{{ asset('assetsAdmin/js/main.js') }}"></script>
 
     <!-- Page JS -->
+
 
 </body>
 </html>

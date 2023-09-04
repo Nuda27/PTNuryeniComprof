@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('layouts.layout_admin');
+    return view('pages.landingPage.index');
 });
 
 Route::get('/dashboard', function () {

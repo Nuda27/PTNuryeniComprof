@@ -17,31 +17,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
-    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/fonts/boxicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/fonts/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/fonts/flag-icons.css') }}" />
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/css/rtl/core.css') }}" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/css/rtl/theme-bordered.css') }}" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{ asset('assetsAdmin/css/demo.css') }}" />
 
-
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assetsAdmin/vendor/libs/typeahead-js/typeahead.css') }}" />
 
     <!-- Page CSS -->
 
-
     <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
+    {{-- <script src="{{ asset('assetsAdmin/vendor/js/helpers.js') }}"></script> --}}
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    {{-- <script src="{{ asset('assetsAdmin/vendor/js/template-customizer.js') }}"></script> --}}
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../../assets/js/config.js"></script>
+    {{-- <script src="{{ asset('assetsAdmin/js/config.js') }}"></script> --}}
 
 </head>
 
@@ -2270,23 +2267,33 @@
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
 
-    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../assets/vendor/js/bootstrap.js"></script>
-    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-    <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-    <script src="../../assets/vendor/js/menu.js"></script>
+    <script src="assetsAdmin/vendor/libs/jquery/jquery.js"></script>
+
+    <script src="assetsAdmin/vendor/libs/popper/popper.js"></script>
+
+    <script src="assetsAdmin/vendor/js/bootstrap.js"></script>
+
+    <script src="assetsAdmin/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="assetsAdmin/vendor/libs/hammer/hammer.js"></script>
+
+    <script src="assetsAdmin/vendor/libs/i18n/i18n.js"></script>
+
+    <script src="assetsAdmin/vendor/libs/typeahead-js/typeahead.js"></script>
+
+    <script src="assetsAdmin/vendor/js/menu.js"></script>
+
 
     <!-- endbuild -->
 
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    <script src="../../assets/js/main.js"></script>
+    <script src="assetsAdmin/js/main.js"></script>
+
     <!-- Page JS -->
-    <script src="../../assets/js/form-basic-inputs.js"></script>
+    <script src="{{ asset('assetsAdmin/js/form-basic-inputs.js') }}"></script>
+
 
 </body>
 

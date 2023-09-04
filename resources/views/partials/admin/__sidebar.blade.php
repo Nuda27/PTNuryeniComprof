@@ -31,13 +31,13 @@
             </a>
         </li>
         <!-- User interface -->
-        <li class="menu-item {{ (request()->is('admin/user')) ? 'open active' : '' }} ">
+        <li class="menu-item {{ (request()->is('admin/user*')) ? 'open active' : '' }} ">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="User interface">Data Master</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item {{ (request()->is('admin/user')) ? 'active' : '' }} ">
+                <li class="menu-item {{ (request()->is('admin/user*')) ? 'active' : '' }} ">
                     <a href="/admin/user" class="menu-link ">
                         <div data-i18n="Accordion">Users</div>
                     </a>

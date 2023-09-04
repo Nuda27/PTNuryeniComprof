@@ -7,10 +7,9 @@ User
 @section('content')
 <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Users</h4>
 
-<button type="button" class="btn btn-primary mb-3 align-items-center d-flex">
+<a href="{{ route('admin.user.create') }}" type="button" class="btn btn-primary mb-3 ">
     <span class="tf-icons bx bx-plus-circle"></span>&nbsp; Tambah
-</button>
-
+</a>
 
 <div class="card">
     <h5 class="card-header">Data User</h5>
@@ -80,7 +79,7 @@ User
         $('#delete-form').attr('action', url);
 
         Swal.fire({
-            title: 'Apakah Anday Yakin?'
+            title: 'Apakah Anda Yakin?'
             , text: "Ingin Menghapus Data Ini!"
             , icon: 'warning'
             , showCancelButton: true

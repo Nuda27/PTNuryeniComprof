@@ -44,6 +44,8 @@ Route::prefix('admin')->group(function () {
 // LANDING PAGE
 Route::get('/', [LandingPageController::class, 'index'])->name('home.index');
 
+Route::get('/service', [LandingPageController::class, 'service'])->name('home.service');
+
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 

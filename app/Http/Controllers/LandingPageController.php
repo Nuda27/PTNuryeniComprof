@@ -15,4 +15,14 @@ class LandingPageController extends Controller
         return view('pages.landingPage.index');
     }
 
+    /**
+     * service
+     *
+     * @return void
+     */
+    public function service()
+    {
+        return view('pages.landingPage.service');
+    }
+
 }

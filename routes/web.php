@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,8 @@ Route::prefix('admin')->group(function () {
         // contact
         route::resource('/contact', ContactAdminController::class, ['as' => 'admin']);
 
+        //services
+        route::resource('/services', ServicesController::class, ['as' => 'admin']);
     });
 });
 

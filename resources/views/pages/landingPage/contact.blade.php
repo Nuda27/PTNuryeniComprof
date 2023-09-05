@@ -30,7 +30,7 @@ Nuryeni - About
                         <i class="fa fa-phone-alt fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Nomor Telepon</h4>
-                    <p class="mb-2">(0264) 8227329</p>
+                    <p class="mb-2">(0264) 88305518</p>
                     <a class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=6282249623853"
                         target="_blank">Chat via Whatsapp <i class="fa fa-arrow-right ms-2"></i></a>
                 </div>
@@ -41,7 +41,7 @@ Nuryeni - About
                         <i class="fa fa-envelope-open fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Email</h4>
-                    <p class="mb-2">info@example.com</p>
+                    <p class="mb-2">pt.nuryeni@gmail.com</p>
                     <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Sekarang <i
                             class="fa fa-arrow-right ms-2"></i></a>
                 </div>
@@ -80,7 +80,7 @@ Nuryeni - About
                             </div>
                             <div class="ms-3">
                                 <h6>Telepon</h6>
-                                <span>+012 345 67890</span>
+                                <span>(0264) 88305518</span>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@ Nuryeni - About
                             </div>
                             <div class="ms-3">
                                 <h6>Email</h6>
-                                <span>info@example.com</span>
+                                <span>pt.nuryeni@gmail.com</span>
                             </div>
                         </div>
                     </div>

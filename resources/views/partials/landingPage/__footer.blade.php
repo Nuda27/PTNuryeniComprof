@@ -19,17 +19,17 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Jam kerja</h5>
                 <p class="mb-1">Senin - Jumat</p>
-                <h6 class="text-light">09:00 - 16:00 </h6>
+                <h6 class="text-light">09:00 - 16:00</h6>
                 <p class="mb-1">Sabtu</p>
-                <h6 class="text-light">09:00 - 13:00 </h6>
+                <h6 class="text-light">09:00 - 12:00</h6>
                 <p class="mb-1">Minggu</p>
                 <h6 class="text-light">Tutup</h6>
             </div>
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white mb-4">Contact Details</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cilangkap, Kec. Babakancikao, Purwakarta</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(0264) 88305518</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>pt.nuryeni@gmail.com</p>
                 <div class="d-flex pt-3">
                     <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i

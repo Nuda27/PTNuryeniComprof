@@ -24,10 +24,10 @@
         <!-- Components -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Content</span></li>
         <!-- Cards -->
-        <li class="menu-item">
-            <a href="#" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Slider</div>
+        <li class="menu-item {{ (request()->is('admin/contact*')) ? 'open active' : '' }}">
+            <a href="/admin/contact" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-mail-send"></i>
+                <div data-i18n="Basic">Contact Message</div>
             </a>
         </li>
         <!-- User interface -->
@@ -44,7 +44,7 @@
                 </li>
                 <li class="menu-item">
                     <a href="#" class="menu-link">
-                        <div data-i18n="Alerts">Alerts</div>
+                        <div data-i18n="Alerts">Profile PT</div>
                     </a>
                 </li>
             </ul>

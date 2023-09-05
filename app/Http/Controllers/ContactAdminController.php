@@ -13,14 +13,14 @@ class ContactAdminController extends Controller
      */
     public function index(Request $request)
     {
-        $data = Contact::all();
-
-        
         if ($request->ajax()) {
-            $data = Contact::all();
+            $data = Contact::latest()->get();
 
             return DataTables::of($data)
                 ->addIndexColumn()
+                ->editColumn('message', function ($row) {
+                    return '<p class="white-space">' . $row->message . '</p>';
+                })
                 ->addColumn('action', function ($row) {
                     $btn = '
                     <div class="dropdown">
@@ -28,14 +28,14 @@ class ContactAdminController extends Controller
                               <i class="bx bx-dots-vertical-rounded"></i>
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="' . route('admin.user.edit', $row->id) . '"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                              <a class="dropdown-item" href="' . route('admin.contact.show', $row->id) . '"><i class="bx bx-show me-1"></i> Show</a>
                               <a class="dropdown-item" href="javascript:hapus(\'' . $row->id . '\')"><i class="bx bx-trash me-1"></i> Delete</a>
                             </div>
                     </div>
                     ';
                     return $btn;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'message'])
                 ->make(true);
         }
 
@@ -63,7 +63,9 @@ class ContactAdminController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Contact::findOrFail($id);
+
+        return view('pages.admin.contact.show', compact('data'));
     }
 
     /**
@@ -87,6 +89,14 @@ class ContactAdminController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            Contact::find($id)->delete();
+
+            return redirect()->route('admin.contact.index')->with('success', 'Pesan deleted successfully');
+
+        } catch (\Throwable $th) {
+            return back()->with(['error' => 'Data gagal dihapus.']);
+        }
+
     }
 }

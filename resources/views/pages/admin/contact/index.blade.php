@@ -1,18 +1,14 @@
 @extends('layouts.layout_admin')
 
 @section('title')
-Contact
+Pesan Form Contact
 @endsection
 
 @section('content')
-<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Contact</h4>
-
-<a href="{{ route('admin.contact.create') }}" type="button" class="btn btn-primary mb-3 ">
-    <span class="tf-icons bx bx-plus-circle"></span>&nbsp; Tambah
-</a>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data Pesan Form Contact</h4>
 
 <div class="card">
-    <h5 class="card-header">Data Contact</h5>
+    <h5 class="card-header">Data Pesan Form Contact</h5>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered data-table nowrap w-100">
@@ -21,6 +17,9 @@ Contact
                         <th width="5%">No</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Telepon</th>
+                        <th>Subject</th>
+                        <th>Pesan</th>
                         <th width="10%">Action</th>
                     </tr>
                 </thead>
@@ -52,7 +51,7 @@ Contact
         var table = $('.data-table').DataTable({
             processing: true
             , serverSide: true
-            , ajax: "{{ route('admin.user.index') }}"
+            , ajax: "{{ route('admin.contact.index') }}"
             , columns: [{
                 data: 'DT_RowIndex'
             }, {
@@ -62,6 +61,18 @@ Contact
                 data: 'email'
                 , name: 'email'
             }, {
+                data: 'phone'
+                ,name: 'phone'
+            },
+            {
+                data: 'subject'
+                , name: 'subject'
+            },
+            {
+                data: 'message'
+                , name: 'message'
+            },
+            {
                 data: 'action'
                 , name: 'action'
                 , orderable: false
@@ -74,7 +85,7 @@ Contact
     // fun delete
     function hapus(uuid) {
 
-        var url = '{{ route('admin.user.index') }}/' + uuid;
+        var url = '{{ route('admin.contact.index') }}/' + uuid;
         $('#delete-form').attr('action', url);
 
         Swal.fire({

@@ -98,31 +98,72 @@ Nuryeni - About
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form method="POST" action="{{ route('contact.store') }}">
+                    @csrf
+
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                <input name="name" type="text" class="form-control @error('name') is-invalid @enderror"
+                                    id="name" placeholder="Nama" value="{{ old('name') }}">
                                 <label for="name">Nama</label>
+                                @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                <input name="email" type="email"
+                                    class="form-control @error('email') is-invalid @enderror" id="email"
+                                    placeholder="Email" value="{{ old('email') }}">
                                 <label for="email">Email</label>
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                <input name="phone" type="text"
+                                    class="form-control @error('phone') is-invalid @enderror" id="phone"
+                                    placeholder="phone" value="{{ old('phone') }}">
+                                <label for="phone">Telepon</label>
+                                @error('phone')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input name="subject" type="text"
+                                    class="form-control @error('subject') is-invalid @enderror" id="subject"
+                                    placeholder="Subject" value="{{ old('subject') }}">
                                 <label for="subject">Subject</label>
+                                @error('subject')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                    style="height: 150px"></textarea>
+                                <textarea name="message" class="form-control @error('message') is-invalid @enderror"
+                                    placeholder="Pesan" id="message" style="height: 150px"
+                                    value="">{{ old('message') }}</textarea>
                                 <label for="message">Pesan</label>
+                                @error('message')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12">

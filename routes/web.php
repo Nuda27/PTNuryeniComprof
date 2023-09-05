@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactAdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
@@ -33,6 +34,10 @@ Route::prefix('admin')->group(function () {
 
         // user
         route::resource('/user', UserController::class, ['as' => 'admin']);
+
+        // contact
+        route::resource('/contact', ContactAdminController::class, ['as' => 'admin']);
+
     });
 });
 

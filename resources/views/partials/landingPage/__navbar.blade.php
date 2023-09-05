@@ -37,7 +37,7 @@
                <a href="#service" class="nav-item nav-link">Services</a>
                <a href="/contact" class="nav-item nav-link {{ (request()->is('contact')) ? 'active' : '' }}">Contact</a>
            </div>
-           <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
+           {{-- <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a> --}}
        </div>
    </nav>
    <!-- Navbar End -->

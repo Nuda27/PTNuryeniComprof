@@ -15,11 +15,12 @@ Nuryeni
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">25 Years
-                                    of Working Experience</p>
-                                <h1 class="display-1 text-white mb-5 animated slideInRight">Industrial Solution
-                                    Providing Company</h1>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More</a>
+                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">Solusi Sewa
+                                    Alat Berat</p>
+                                <h1 class="display-1 text-white mb-5 animated slideInRight">Sewa Alat Berat Berkualitas
+                                </h1>
+                                <a href="{{ route('contact.index') }}"
+                                    class="btn btn-primary py-3 px-5 animated slideInRight">Kontak Kami</a>
                             </div>
                         </div>
                     </div>
@@ -31,11 +32,12 @@ Nuryeni
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">25 Years
-                                    of Working Experience</p>
-                                <h1 class="display-1 text-white mb-5 animated slideInRight">The Best Reliable
-                                    Industry Solution</h1>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More</a>
+                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">Solusi Sewa
+                                    Alat Berat</p>
+                                <h1 class="display-1 text-white mb-5 animated slideInRight">Harga Sewa Alat Berat
+                                    Lebih Murah</h1>
+                                <a href="{{ route('contact.index') }}"
+                                    class="btn btn-primary py-3 px-5 animated slideInRight">Kontak Kami</a>
                             </div>
                         </div>
                     </div>
@@ -70,25 +72,18 @@ Nuryeni
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
-                <h1 class="display-5 mb-4">We Are Leader In Industrial Market</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                <p class="fw-medium text-uppercase text-primary mb-2">About</p>
+                <h1 class="display-5 mb-4">Kemudahan pemesanan alat berat terpercaya</h1>
+                <p class="mb-4">PT. Perkasa Sarana Utama (PSU) adalah perusahaan kontraktor umum dan sewa alat berat di
+                    Indonesia. Perusahaan didirikan
+                    pada 9 Januari 2004. Spesialisasi kami adalah menyediakan solusi sewa untuk konstruksi, industri,
+                    pertambangan dan pasar
+                    pemilik rumah. Kami bertujuan untuk menjadi perusahaan persewaan alat berat terkemuka dan
+                    menyediakan layanan satu atap
+                    untuk memberikan layanan, produk, dan solusi terintegrasi terbaik di kelasnya untuk memenuhi
+                    kebutuhan kami kebutuhan
+                    pelanggan.
                 </p>
-                <div class="d-flex align-items-center mb-4">
-                    <div class="flex-shrink-0 bg-primary p-4">
-                        <h1 class="display-2">25</h1>
-                        <h5 class="text-white">Years of</h5>
-                        <h5 class="text-white">Experience</h5>
-                    </div>
-                    <div class="ms-4">
-                        <p><i class="fa fa-check text-primary me-2"></i>Power & Energy</p>
-                        <p><i class="fa fa-check text-primary me-2"></i>Civil Engineering</p>
-                        <p><i class="fa fa-check text-primary me-2"></i>Chemical Engineering</p>
-                        <p><i class="fa fa-check text-primary me-2"></i>Mechanical Engineering</p>
-                        <p class="mb-0"><i class="fa fa-check text-primary me-2"></i>Oil & Gas Engineering</p>
-                    </div>
-                </div>
                 <div class="row pt-2">
                     <div class="col-sm-6">
                         <div class="d-flex align-items-center">
@@ -127,28 +122,28 @@ Nuryeni
             <div class="text-center border p-5">
                 <i class="fa fa-certificate fa-3x text-white mb-3"></i>
                 <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">25</h1>
-                <span class="fs-5 fw-semi-bold text-white">Years Experience</span>
+                <span class="fs-5 fw-semi-bold text-white">Tahun Pengalaman</span>
             </div>
         </div>
         <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
             <div class="text-center border p-5">
                 <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
                 <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">135</h1>
-                <span class="fs-5 fw-semi-bold text-white">Team Members</span>
+                <span class="fs-5 fw-semi-bold text-white">Anggota Tim</span>
             </div>
         </div>
         <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
             <div class="text-center border p-5">
                 <i class="fa fa-users fa-3x text-white mb-3"></i>
                 <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">957</h1>
-                <span class="fs-5 fw-semi-bold text-white">Happy Clients</span>
+                <span class="fs-5 fw-semi-bold text-white">Penilaian Positif</span>
             </div>
         </div>
         <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
             <div class="text-center border p-5">
                 <i class="fa fa-check-double fa-3x text-white mb-3"></i>
                 <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">1839</h1>
-                <span class="fs-5 fw-semi-bold text-white">Projects Done</span>
+                <span class="fs-5 fw-semi-bold text-white">Proyek Selesai</span>
             </div>
         </div>
     </div>
@@ -163,19 +158,15 @@ Nuryeni
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative me-lg-4">
                     <img class="img-fluid w-100" src="{{ asset('assetsLanding/img/feature.jpg') }}" alt="">
-
-                    <span class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block" style="width: 120px; height: 120px;"></span>
-                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                        <span></span>
-                    </button>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <p class="fw-medium text-uppercase text-primary mb-2">Why Choosing Us!</p>
-                <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
+                <p class="fw-medium text-uppercase text-primary mb-2">MENGAPA MEMILIH KAMI</p>
+                <h1 class="display-5 mb-4">Beberapa Alasan Mengapa Orang Memilih Kami</h1>
+                {{-- <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
+                    et
                     eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                </p>
+                </p> --}}
                 <div class="row gy-4">
                     <div class="col-12">
                         <div class="d-flex">
@@ -213,6 +204,18 @@ Nuryeni
                             </div>
                         </div>
                     </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Customer Support</h4>
+                                <span>Erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
+                                    dolore erat amet</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,7 +225,8 @@ Nuryeni
 
 
 <!-- Video Modal Start -->
-<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content rounded-0">
             <div class="modal-header">
@@ -232,7 +236,8 @@ Nuryeni
             <div class="modal-body">
                 <!-- 16:9 aspect ratio -->
                 <div class="ratio ratio-16x9">
-                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                        allow="autoplay"></iframe>
                 </div>
             </div>
         </div>
@@ -246,7 +251,7 @@ Nuryeni
     <div class="container">
         <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
-            <h1 class="display-5 mb-4">We Provide Best Industrial Services</h1>
+            <h1 class="display-5 mb-4">Kami Memberikan Pelayanan Terbaik</h1>
         </div>
         <div class="row gy-5 gx-4">
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -318,8 +323,8 @@ Nuryeni
 <!-- Project Start -->
 <div class="container-fluid bg-dark pt-5 my-5 px-0">
     <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-        <p class="fw-medium text-uppercase text-primary mb-2">Our Projects</p>
-        <h1 class="display-5 text-white mb-5">See What We Have Completed Recently</h1>
+        <p class="fw-medium text-uppercase text-primary mb-2">PROYEK KAMI</p>
+        <h1 class="display-5 text-white mb-5">Proyek Yang Kami Selesaikan</h1>
     </div>
     <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
         <a class="project-item" href="">
@@ -363,86 +368,12 @@ Nuryeni
 <!-- Project End -->
 
 
-<!-- Team Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <p class="fw-medium text-uppercase text-primary mb-2">Our Team</p>
-            <h1 class="display-5 mb-5">Dedicated Team Members</h1>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item">
-                    <img class="img-fluid" src="assetsLanding/img/team-1.jpg" alt="">
-
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
-                            <i class="fa fa-2x fa-share text-white"></i>
-                        </div>
-                        <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h5>Rob Miller</h5>
-                            <span class="text-primary">CEO & Founder</span>
-                            <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item">
-                    <img class="img-fluid" src="assetsLanding/img/team-2.jpg" alt="">
-
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
-                            <i class="fa fa-2x fa-share text-white"></i>
-                        </div>
-                        <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h5>Adam Crew</h5>
-                            <span class="text-primary">Project Manager</span>
-                            <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item">
-                    <img class="img-fluid" src="assetsLanding/img/team-3.jpg" alt="">
-
-                    <div class="d-flex">
-                        <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
-                            <i class="fa fa-2x fa-share text-white"></i>
-                        </div>
-                        <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h5>Peter Farel</h5>
-                            <span class="text-primary">Engineer</span>
-                            <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End -->
-
-
 <!-- Testimonial Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <p class="fw-medium text-uppercase text-primary mb-2">Testimonial</p>
-            <h1 class="display-5 mb-5">What Our Clients Say!</h1>
+            <h1 class="display-5 mb-5">Apa Kata Mereka</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
             <div class="testimonial-item text-center">

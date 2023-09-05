@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactAdminController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
@@ -18,7 +20,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 // Route::get('/te', function () {
-//     return view('layouts.layout_auth');
+//     return view('email.contact');
 // });
 
 Route::prefix('admin')->group(function () {
@@ -32,11 +34,17 @@ Route::prefix('admin')->group(function () {
 
         // user
         route::resource('/user', UserController::class, ['as' => 'admin']);
+
+        // contact
+        route::resource('/contact', ContactAdminController::class, ['as' => 'admin']);
+
     });
 });
 
 // LANDING PAGE
 Route::get('/', [LandingPageController::class, 'index'])->name('home.index');
-Route::get('/contact', [LandingPageController::class, 'contact'])->name('contact.index');
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 require __DIR__ . '/auth.php';

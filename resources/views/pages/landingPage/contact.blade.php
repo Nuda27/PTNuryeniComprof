@@ -29,10 +29,10 @@ Nuryeni - About
                     <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-phone-alt fa-2x text-primary"></i>
                     </div>
-                    <h4 class="mb-3">Phone Number</h4>
-                    <p class="mb-2">+012 345 67890</p>
-                    <p class="mb-4">+012 345 67890</p>
-                    <a class="btn btn-primary px-4" href="tel:+0123456789">Call Now <i class="fa fa-arrow-right ms-2"></i></a>
+                    <h4 class="mb-3">Nomor Telepon</h4>
+                    <p class="mb-2">(0264) 8227329</p>
+                    <a class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=6282249623853"
+                        target="_blank">Chat via Whatsapp <i class="fa fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -40,10 +40,10 @@ Nuryeni - About
                     <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-envelope-open fa-2x text-primary"></i>
                     </div>
-                    <h4 class="mb-3">Email Address</h4>
+                    <h4 class="mb-3">Email</h4>
                     <p class="mb-2">info@example.com</p>
-                    <p class="mb-4">support@example.com</p>
-                    <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Now <i class="fa fa-arrow-right ms-2"></i></a>
+                    <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Sekarang <i
+                            class="fa fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -51,25 +51,27 @@ Nuryeni - About
                     <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
                     </div>
-                    <h4 class="mb-3">Office Address</h4>
-                    <p class="mb-2">+012 345 67890</p>
-                    <p class="mb-4">+012 345 67890</p>
-                    <a class="btn btn-primary px-4" href="https://goo.gl/maps/FsznshxgnULBGgkN9" target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
+                    <h4 class="mb-3">Alamat Kantor</h4>
+                    <p class="mb-2">Cilangkap, Kec. Babakancikao, Kabupaten Purwakarta, Jawa Barat 41151</p>
+                    <a class="btn btn-primary px-4" href="https://goo.gl/maps/TSFRY1FHQkHWhtoK9" target="blank">Arahkan
+                        <i class="fa fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
         <div class="row mb-5">
             <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd" frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2792143006304!2d107.39230537462177!3d-6.486282363415887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690d081860ba4d%3A0x876776ac483c1463!2sPT.%20Nuryeni!5e0!3m2!1sid!2sid!4v1693898098781!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="fw-medium text-uppercase text-primary mb-2">Contact Us</p>
-                <h1 class="display-5 mb-4">If You Have Any Queries, Please Feel Free To Contact Us</h1>
-                <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form
-                    with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're
-                    done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                <p class="fw-medium text-uppercase text-primary mb-2">Kontak Kami</p>
+                <h1 class="display-5 mb-4">Jangan Ragu Untuk Menghubungi Kami</h1>
+                <p class="mb-4">Jika Anda memiliki pertanyaan atau membutuhkan informasi, silahkan hubungi kami atau
+                    mengisi formulir di samping ini:</p>
                 <div class="row g-4">
                     <div class="col-6">
                         <div class="d-flex">
@@ -77,7 +79,7 @@ Nuryeni - About
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <div class="ms-3">
-                                <h6>Call Us</h6>
+                                <h6>Telepon</h6>
                                 <span>+012 345 67890</span>
                             </div>
                         </div>
@@ -88,7 +90,7 @@ Nuryeni - About
                                 <i class="fa fa-envelope text-white"></i>
                             </div>
                             <div class="ms-3">
-                                <h6>Mail Us</h6>
+                                <h6>Email</h6>
                                 <span>info@example.com</span>
                             </div>
                         </div>
@@ -96,34 +98,76 @@ Nuryeni - About
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form method="POST" action="{{ route('contact.store') }}">
+                    @csrf
+
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Your Name</label>
+                                <input name="name" type="text" class="form-control @error('name') is-invalid @enderror"
+                                    id="name" placeholder="Nama" value="{{ old('name') }}">
+                                <label for="name">Nama</label>
+                                @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                <label for="email">Your Email</label>
+                                <input name="email" type="email"
+                                    class="form-control @error('email') is-invalid @enderror" id="email"
+                                    placeholder="Email" value="{{ old('email') }}">
+                                <label for="email">Email</label>
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                <input name="phone" type="text"
+                                    class="form-control @error('phone') is-invalid @enderror" id="phone"
+                                    placeholder="phone" value="{{ old('phone') }}">
+                                <label for="phone">Telepon</label>
+                                @error('phone')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input name="subject" type="text"
+                                    class="form-control @error('subject') is-invalid @enderror" id="subject"
+                                    placeholder="Subject" value="{{ old('subject') }}">
                                 <label for="subject">Subject</label>
+                                @error('subject')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                <label for="message">Message</label>
+                                <textarea name="message" class="form-control @error('message') is-invalid @enderror"
+                                    placeholder="Pesan" id="message" style="height: 150px"
+                                    value="">{{ old('message') }}</textarea>
+                                <label for="message">Pesan</label>
+                                @error('message')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            <button class="btn btn-primary py-3 px-5" type="submit">Kirim Pesan</button>
                         </div>
                     </div>
                 </form>

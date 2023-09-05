@@ -70,7 +70,7 @@ class UserController extends Controller
             //redirect
             return redirect()->route('admin.user.index')->with('success', 'User created successfully');
         } catch (\Throwable $e) {
-            return back()->withErrors(['message' => 'Data gagal disimpan.']);
+            return back()->with(['error' => 'Data gagal disimpan.']);
         }
 
     }
@@ -124,8 +124,9 @@ class UserController extends Controller
 
             //redirect
             return redirect()->route('admin.user.index')->with('success', 'User updated successfully');
+
         } catch (\Throwable $th) {
-            return back()->withErrors(['message' => 'Data gagal diperbarui.']);
+            return back()->with(['error' => 'Data gagal diperbarui.']);
         }
 
     }
@@ -135,9 +136,13 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        User::find($id)->delete();
+        try {
+            User::find($id)->delete();
 
-        return redirect()->route('admin.user.index')->with('success', 'User deleted successfully');
+            return redirect()->route('admin.user.index')->with('success', 'User deleted successfully');
 
+        } catch (\Throwable $th) {
+            return back()->with(['error' => 'Data gagal dihapus.']);
+        }
     }
 }

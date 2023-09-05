@@ -15,13 +15,4 @@ class LandingPageController extends Controller
         return view('pages.landingPage.index');
     }
 
-    /**
-     * contact
-     *
-     * @return void
-     */
-    public function contact()
-    {
-        return view('pages.landingPage.contact');
-    }
 }

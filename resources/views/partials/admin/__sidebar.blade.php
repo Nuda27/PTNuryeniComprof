@@ -33,10 +33,18 @@
         </li>
 
         {{-- About --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/about')) ? 'open active' : '' }}">
+            <a href="/admin/about" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-conversation"></i>
                 <div data-i18n="Basic">About</div>
+            </a>
+        </li>
+
+        {{-- Why Choose --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-question-mark"></i>
+                <div data-i18n="Basic">Why Choose</div>
             </a>
         </li>
 
@@ -45,6 +53,22 @@
             <a href="/admin/services" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-car"></i>
                 <div data-i18n="Basic">Servinces</div>
+            </a>
+        </li>
+
+        {{-- Project --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-notepad"></i>
+                <div data-i18n="Basic">Project</div>
+            </a>
+        </li>
+
+        {{-- testimonial --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="Basic">Testimonial</div>
             </a>
         </li>
 
@@ -63,7 +87,6 @@
                 <div data-i18n="Basic">Contact Message</div>
             </a>
         </li>
-
 
         <!-- User interface -->
         <li class="menu-item {{ (request()->is('admin/user*')) ? 'open active' : '' }} ">

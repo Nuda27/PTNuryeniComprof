@@ -7,6 +7,7 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,9 @@ Route::prefix('admin')->group(function () {
 
         //services
         route::resource('/services', ServicesController::class, ['as' => 'admin']);
+
+        //About
+        route::resource('/about', AboutController::class, ['as' => 'admin']);
     });
 });
 

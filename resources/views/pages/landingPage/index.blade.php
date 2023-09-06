@@ -58,20 +58,15 @@ Nuryeni | Solution To All Your Problems
 
 
 <!-- About Start -->
-<div class="container-xxl py-5" id="about">
+<div class="container-xxl py-5 about" id="about">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-6">
-                <div class="row gx-3 h-100">
-                    <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('assetsLanding/img/about-1.jpg') }}">
-                    </div>
-                    <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="{{ asset('assetsLanding/img/about-2.jpg') }}">
-                    </div>
+            <div class="col-lg-5">
+                <div class="position-relative me-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid w-100 about-img" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
                 <p class="fw-medium text-uppercase text-primary mb-2">About</p>
                 <h1 class="display-5 mb-4">Kemudahan pemesanan alat berat terpercaya</h1>
                 <p class="mb-4">PT. Perkasa Sarana Utama (PSU) adalah perusahaan kontraktor umum dan sewa alat berat di
@@ -224,28 +219,6 @@ Nuryeni | Solution To All Your Problems
 <!-- Features End -->
 
 
-<!-- Video Modal Start -->
-<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-0">
-            <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- 16:9 aspect ratio -->
-                <div class="ratio ratio-16x9">
-                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                        allow="autoplay"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Video Modal End -->
-
-
 <!-- Service Start -->
 @if(count($services) > 0)
 <div class="container-xxl py-5" id="service">
@@ -259,9 +232,11 @@ Nuryeni | Solution To All Your Problems
             @foreach ($services as $service)
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <img class="img-fluid service-img-cover" src="{{ asset($service->file) }}" alt="">
+                    <img class="img-fluid service-img-cover"
+                        src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
+                        alt="service">
                     <div class="service-img">
-                        <img class="img-fluid" src="{{ asset($service->file) }}" alt="">
+                        <img class="img-fluid" src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="service">
                     </div>
                     <div class="service-detail">
                         <div class="service-title">

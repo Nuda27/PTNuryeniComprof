@@ -255,6 +255,15 @@ h6,
     border-color: rgba(255, 255, 255, .1) !important;
 }
 
+/*** About ***/
+.about .about-img {
+    width: 100%;
+    height: 422px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 
 /*** Features ***/
 .btn-play {

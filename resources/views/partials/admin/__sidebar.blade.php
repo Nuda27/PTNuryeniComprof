@@ -53,7 +53,7 @@
         <li class="menu-item {{ (request()->is('admin/services*')) ? 'open active' : '' }}">
             <a href="/admin/services" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-car"></i>
-                <div data-i18n="Basic">Servinces</div>
+                <div data-i18n="Basic">Services</div>
             </a>
         </li>
 

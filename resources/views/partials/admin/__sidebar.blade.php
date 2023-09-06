@@ -31,7 +31,7 @@
             </a>
         </li>
         <!-- User interface -->
-        <li class="menu-item {{ (request()->is('admin/user*', 'admin/services*')) ? 'open active' : '' }} ">
+        <li class="menu-item {{ (request()->is('admin/user*', 'admin/services*', 'admin/about*')) ? 'open active' : '' }} ">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="User interface">Data Master</div>
@@ -45,6 +45,11 @@
                 <li class="menu-item {{ (request()->is('admin/services*')) ? 'active' : '' }} ">
                     <a href="/admin/services" class="menu-link ">
                         <div data-i18n="Accordion">Services</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ (request()->is('admin/about*')) ? 'active' : '' }} ">
+                    <a href="/admin/about" class="menu-link ">
+                        <div data-i18n="Accordion">About</div>
                     </a>
                 </li>
                 <li class="menu-item">

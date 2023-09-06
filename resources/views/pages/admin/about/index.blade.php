@@ -7,9 +7,9 @@
 @section('content')
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data About</h4>
 
-    <a href="{{ route('admin.services.create') }}" type="button" class="btn btn-primary mb-3 ">
+    {{-- <a href="{{ route('admin.services.create') }}" type="button" class="btn btn-primary mb-3 ">
         <span class="tf-icons bx bx-plus-circle"></span>&nbsp; Tambah
-    </a>
+    </a> --}}
 
     <div class="card">
         <h5 class="card-header">Data About</h5>

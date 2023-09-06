@@ -23,15 +23,73 @@
 
         <!-- Components -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Content</span></li>
-        <!-- Cards -->
+
+        {{-- Carousel --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-image"></i>
+                <div data-i18n="Basic">Carousel</div>
+            </a>
+        </li>
+
+        {{-- About --}}
+        <li class="menu-item {{ (request()->is('admin/about')) ? 'open active' : '' }}">
+            <a href="/admin/about" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-conversation"></i>
+                <div data-i18n="Basic">About</div>
+            </a>
+        </li>
+
+        {{-- Why Choose --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-question-mark"></i>
+                <div data-i18n="Basic">Why Choose</div>
+            </a>
+        </li>
+
+        {{-- service --}}
+        <li class="menu-item {{ (request()->is('admin/services*')) ? 'open active' : '' }}">
+            <a href="/admin/services" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-car"></i>
+                <div data-i18n="Basic">Servinces</div>
+            </a>
+        </li>
+
+        {{-- Project --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-notepad"></i>
+                <div data-i18n="Basic">Project</div>
+            </a>
+        </li>
+
+        {{-- testimonial --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="Basic">Testimonial</div>
+            </a>
+        </li>
+
+        {{-- profile perusahaan --}}
+        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-building"></i>
+                <div data-i18n="Basic">Profile PT</div>
+            </a>
+        </li>
+
+        <!-- contact -->
         <li class="menu-item {{ (request()->is('admin/contact*')) ? 'open active' : '' }}">
             <a href="/admin/contact" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-mail-send"></i>
                 <div data-i18n="Basic">Contact Message</div>
             </a>
         </li>
+
         <!-- User interface -->
-        <li class="menu-item {{ (request()->is('admin/user*', 'admin/services*', 'admin/about*')) ? 'open active' : '' }} ">
+        <li class="menu-item {{ (request()->is('admin/user*')) ? 'open active' : '' }} ">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="User interface">Data Master</div>
@@ -40,21 +98,6 @@
                 <li class="menu-item {{ (request()->is('admin/user*')) ? 'active' : '' }} ">
                     <a href="/admin/user" class="menu-link ">
                         <div data-i18n="Accordion">Users</div>
-                    </a>
-                </li>
-                <li class="menu-item {{ (request()->is('admin/services*')) ? 'active' : '' }} ">
-                    <a href="/admin/services" class="menu-link ">
-                        <div data-i18n="Accordion">Services</div>
-                    </a>
-                </li>
-                <li class="menu-item {{ (request()->is('admin/about*')) ? 'active' : '' }} ">
-                    <a href="/admin/about" class="menu-link ">
-                        <div data-i18n="Accordion">About</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                        <div data-i18n="Alerts">Profile PT</div>
                     </a>
                 </li>
             </ul>

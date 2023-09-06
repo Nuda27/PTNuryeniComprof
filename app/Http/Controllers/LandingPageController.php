@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Services;
+
 class LandingPageController extends Controller
 {
 
@@ -12,7 +15,13 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        return view('pages.landingPage.index');
+        // get 3 data terbaru service
+        $services = Services::latest()->take('3')->get();
+
+        // get 1 data about
+        $about = About::first();
+
+        return view('pages.landingPage.index', compact('services', 'about'));
     }
 
     /**
@@ -22,7 +31,10 @@ class LandingPageController extends Controller
      */
     public function service()
     {
-        return view('pages.landingPage.service');
+        // get 3 data terbaru service
+        $services = Services::latest()->get();
+
+        return view('pages.landingPage.service', compact('services'));
     }
 
 }

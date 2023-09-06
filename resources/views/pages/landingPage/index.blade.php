@@ -256,9 +256,9 @@ Nuryeni | Solution To All Your Problems
         <div class="row gy-5 gx-4">
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <img class="img-fluid" src="{{ asset('assetsLanding/img/service-1.jpg') }}" alt="">
+                    <img class="img-fluid service-img-cover" src="{{ asset('assetsLanding/img/service-11.jpg') }}" alt="">
                     <div class="service-img">
-                        <img class="img-fluid" src="{{ asset('assetsLanding/img/service-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assetsLanding/img/service-11.jpg') }}" alt="">
                     </div>
                     <div class="service-detail">
                         <div class="service-title">
@@ -271,12 +271,12 @@ Nuryeni | Solution To All Your Problems
                                 lorem sed diam stet diam sed stet.</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Read More</a>
+                    {{-- <a class="btn btn-light" href="">Read More</a> --}}
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item">
-                    <img class="img-fluid" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
+                    <img class="img-fluid service-img-cover" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
                     <div class="service-img">
                         <img class="img-fluid" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
                     </div>
@@ -291,12 +291,12 @@ Nuryeni | Solution To All Your Problems
                                 lorem sed diam stet diam sed stet.</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Read More</a>
+                    {{-- <a class="btn btn-light" href="">Read More</a> --}}
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item">
-                    <img class="img-fluid" src="{{ asset('assetsLanding/img/service-3.jpg') }}" alt="">
+                    <img class="img-fluid service-img-cover" src="{{ asset('assetsLanding/img/service-3.jpg') }}" alt="">
                     <div class="service-img">
                         <img class="img-fluid" src="{{ asset('assetsLanding/img/service-3.jpg') }}" alt="">
                     </div>
@@ -311,7 +311,7 @@ Nuryeni | Solution To All Your Problems
                                 lorem sed diam stet diam sed stet.</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Read More</a>
+                    {{-- <a class="btn btn-light" href="">Read More</a> --}}
                 </div>
             </div>
         </div>

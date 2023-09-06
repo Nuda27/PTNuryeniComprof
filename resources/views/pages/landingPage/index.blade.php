@@ -1,7 +1,7 @@
 @extends('layouts.layout_landing')
 
 @section('title')
-Nuryeni
+Nuryeni | Solution To All Your Problems
 @endsection
 
 @section('content')
@@ -85,25 +85,25 @@ Nuryeni
                     pelanggan.
                 </p>
                 <div class="row pt-2">
-                    <div class="col-sm-6">
+                    <div class="col-sm-7">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa fa-envelope-open text-white"></i>
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Email us</p>
-                                <h5 class="mb-0">info@example.com</h5>
+                                <h6 class="mb-0">pt.nuryeni2018@gmail.com</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Call us</p>
-                                <h5 class="mb-0">+012 345 6789</h5>
+                                <h6 class="mb-0">(0264) 88305518</h6>
                             </div>
                         </div>
                     </div>
@@ -263,7 +263,7 @@ Nuryeni
                     <div class="service-detail">
                         <div class="service-title">
                             <hr class="w-25">
-                            <h3 class="mb-0">Civil & Gas Engineering</h3>
+                            <h3 class="mb-0">Wings Box</h3>
                             <hr class="w-25">
                         </div>
                         <div class="service-text">
@@ -283,7 +283,7 @@ Nuryeni
                     <div class="service-detail">
                         <div class="service-title">
                             <hr class="w-25">
-                            <h3 class="mb-0">Power & Energy Engineering</h3>
+                            <h3 class="mb-0">Excavator</h3>
                             <hr class="w-25">
                         </div>
                         <div class="service-text">
@@ -303,7 +303,7 @@ Nuryeni
                     <div class="service-detail">
                         <div class="service-title">
                             <hr class="w-25">
-                            <h3 class="mb-0">Plumbing & Water Treatment</h3>
+                            <h3 class="mb-0">Forklift</h3>
                             <hr class="w-25">
                         </div>
                         <div class="service-text">

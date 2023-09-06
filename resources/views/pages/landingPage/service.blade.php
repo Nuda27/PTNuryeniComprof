@@ -1,7 +1,7 @@
 @extends('layouts.layout_landing')
 
 @section('title')
-Nuryeni - Service
+Nuryeni | Solution To All Your Problems
 @endsection
 
 @section('content')

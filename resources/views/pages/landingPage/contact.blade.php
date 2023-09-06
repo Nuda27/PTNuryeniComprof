@@ -1,7 +1,7 @@
 @extends('layouts.layout_landing')
 
 @section('title')
-Nuryeni - About
+Nuryeni | Solution To All Your Problems
 @endsection
 
 @section('content')
@@ -41,8 +41,8 @@ Nuryeni - About
                         <i class="fa fa-envelope-open fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Email</h4>
-                    <p class="mb-2">pt.nuryeni@gmail.com</p>
-                    <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Sekarang <i
+                    <p class="mb-2">pt.nuryeni2018@gmail.com</p>
+                    <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Sekarang<i
                             class="fa fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
@@ -91,7 +91,7 @@ Nuryeni - About
                             </div>
                             <div class="ms-3">
                                 <h6>Email</h6>
-                                <span>pt.nuryeni@gmail.com</span>
+                                <span>pt.nuryeni2018@gmail.com</span>
                             </div>
                         </div>
                     </div>

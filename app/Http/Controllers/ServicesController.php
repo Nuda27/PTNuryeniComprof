@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Services;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Yajra\DataTables\DataTables;
-use File;
 
 class ServicesController extends Controller
 {
@@ -16,8 +16,8 @@ class ServicesController extends Controller
 
             return DataTables::of($data)
                 ->addIndexColumn()
-                ->addColumn('file', function ($row){
-                    $image = '<img src="'.asset($row->file).'" width="50px">';
+                ->addColumn('file', function ($row) {
+                    $image = '<img src="' . asset($row->file) . '" width="50px">';
                     return $image;
                 })
                 ->addColumn('action', function ($row) {
@@ -61,7 +61,7 @@ class ServicesController extends Controller
                 $namaFolder2 = 'file/services';
                 $file->move($namaFolder2, $nama_file);
                 $pathPublic = $namaFolder2 . "/" . $nama_file;
-            }else{
+            } else {
                 $pathPublic = null;
             }
 
@@ -110,14 +110,14 @@ class ServicesController extends Controller
             } else {
                 $pathPublic2 = $request->pathFile;
             }
-                //update user with password
-                $services = Services::where("id", $id)->update([
-                    'title' => $request->title,
-                    'description' => $request->description,
-                    'file' => $pathPublic2,
-                ]);
+            //update user with password
+            $services = Services::where("id", $id)->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'file' => $pathPublic2,
+            ]);
 
-                //echo $services;
+            //echo $services;
             //redirect
             return redirect()->route('admin.services.index')->with('success', 'Services updated successfully');
 
@@ -131,7 +131,13 @@ class ServicesController extends Controller
     public function destroy($id)
     {
         try {
-            Services::find($id)->delete();
+            $data = Services::find($id);
+
+            // delete data
+            $data->delete();
+
+            // delete file
+            File::delete($data->file);
 
             return redirect()->route('admin.services.index')->with('success', 'Services deleted successfully');
 

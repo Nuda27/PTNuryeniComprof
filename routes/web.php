@@ -1,13 +1,14 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactAdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\OfficeProfileController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +46,10 @@ Route::prefix('admin')->group(function () {
 
         //About
         route::resource('/about', AboutController::class, ['as' => 'admin']);
+
+        // contact
+        route::resource('/office-profile', OfficeProfileController::class, ['as' => 'admin']);
+
     });
 });
 

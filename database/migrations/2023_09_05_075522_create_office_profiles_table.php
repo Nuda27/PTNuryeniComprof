@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('facebook')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('youtube')->nullable();
-            $table->string('web')->nullable();
+            // $table->string('web')->nullable();
             $table->string('maps')->nullable();
             $table->text('logo')->nullable();
             $table->text('about')->nullable();

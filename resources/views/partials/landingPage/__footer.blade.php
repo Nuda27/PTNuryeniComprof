@@ -3,11 +3,14 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">PT. Nuryeni</h5>
-                <img src="{{ asset('logo/nyn.png') }}" alt="nyn" class="mb-2" width="75">
-                <p>PT. Nuryeni adalah sebuah perusahaan yang bergerak dibidang Waste (LB3) management mulai dari
-                    penyewaan alat berat dll</p>
-
+                <h5 class="text-white mb-4"> {{ $profile->name ? $profile->name : 'PT. Nuryeni' }}</h5>
+                <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn" class="mb-2"
+                    width="75">
+                <p>
+                    {{ $profile->about ? $profile->about : 'PT. Nuryeni adalah sebuah perusahaan yang bergerak dibidang
+                    Waste (LB3) management mulai dari
+                    penyewaan alat berat dll' }}
+                </p>
             </div>
             <div class="col-lg-2 col-md-6">
                 <h5 class="text-white mb-4">Quick Links</h5>
@@ -27,16 +30,46 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white mb-4">Contact Details</h5>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cilangkap, Kec. Babakancikao, Purwakarta</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(0264) 88305518</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>pt.nuryeni@gmail.com</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>
+                    {{$profile->alamat ? $profile->alamat : 'Cilangkap, Kec. Babakancikao, Purwakarta' }}
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                    {{ $profile->telepon ? $profile->telepon : '(0264)88305518'}}
+                </p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ $profile->name ? $profile->name : 'PT Nuryeni' }}
+                </p>
                 <div class="d-flex pt-3">
-                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                            class="fab fa-linkedin-in"></i></a>
+                    {{-- ig --}}
+                    @if($profile->instagram)
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->instagram }}"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    @endif
+
+                    {{-- fb --}}
+                    @if($profile->facebook)
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->facebook }}"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    @endif
+
+                    {{-- yt --}}
+                    @if($profile->youtube)
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->youtube }}"
+                        target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    @endif
+
+                    {{-- linked --}}
+                    @if($profile->linkedin)
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->linkedin }}"
+                        target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    @endif
                 </div>
             </div>
 

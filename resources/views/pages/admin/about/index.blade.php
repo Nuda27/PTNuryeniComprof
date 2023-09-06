@@ -22,6 +22,7 @@
                             <th width="5%">No</th>
                             <th>Title</th>
                             <th>Description</th>
+                            <th>Picture</th>
                             <th width="10%">Action</th>
                         </tr>
                     </thead>
@@ -61,7 +62,12 @@
                 }, {
                     data: 'description',
                     name: 'description'
-                }, {
+                },{
+                    data: 'file',
+                    name: 'file',
+                    orderable: false,
+                    searchable: false
+                },{
                     data: 'action',
                     name: 'action',
                     orderable: false,
@@ -74,7 +80,7 @@
         // fun delete
         function hapus(uuid) {
 
-            var url = '{{ route('admin.services.index') }}/' + uuid;
+            var url = '{{ route('admin.about.index') }}/' + uuid;
             $('#delete-form').attr('action', url);
 
             Swal.fire({

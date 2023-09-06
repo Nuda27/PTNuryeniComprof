@@ -1,7 +1,8 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="/admin/dashboard" class="app-brand-link">
-            <img src="{{ asset('logo/nyn.png') }}" alt="nyn" class="app-brand-logo demo" width="75">
+            <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn"
+                class="app-brand-logo demo" width="75">
             <span class="app-brand-text demo menu-text fw-bolder ms-2">Nuryeni</span>
         </a>
 

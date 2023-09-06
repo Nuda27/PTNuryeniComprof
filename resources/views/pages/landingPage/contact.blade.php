@@ -30,9 +30,19 @@ Nuryeni | Solution To All Your Problems
                         <i class="fa fa-phone-alt fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Nomor Telepon</h4>
-                    <p class="mb-2">(0264) 88305518</p>
-                    <a class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=6282249623853"
-                        target="_blank">Chat via Whatsapp <i class="fa fa-arrow-right ms-2"></i></a>
+                    <p class="mb-2">
+                        {{ $profile->telepon ? $profile->telepon : '(0264)88305518'}}
+                    </p>
+
+                    <br>
+                    @if($profile->whatsapp)
+                    <a class="btn btn-primary px-4"
+                        href="https://api.whatsapp.com/send?phone=62{{ substr($profile->whatsapp, 1) }}"
+                        target="_blank">
+                        Chat via Whatsapp
+                        <i class="fa fa-arrow-right ms-2"></i>
+                    </a>
+                    @endif
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -41,9 +51,14 @@ Nuryeni | Solution To All Your Problems
                         <i class="fa fa-envelope-open fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Email</h4>
-                    <p class="mb-2">pt.nuryeni2018@gmail.com</p>
-                    <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Sekarang<i
-                            class="fa fa-arrow-right ms-2"></i></a>
+                    <p class="mb-2">
+                        {{ $profile->email ? $profile->email : 'pt.nuryeni2018@gmail.com'}}
+                    </p>
+                    @if($profile->email)
+                    <a class="btn btn-primary px-4" href="mailto:{{ $profile->email }}">
+                        Email Sekarang <i class="fa fa-arrow-right ms-2"></i>
+                    </a>
+                    @endif
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -52,9 +67,19 @@ Nuryeni | Solution To All Your Problems
                         <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Alamat Kantor</h4>
-                    <p class="mb-2">Cilangkap, Kec. Babakancikao, Kabupaten Purwakarta, Jawa Barat 41151</p>
-                    <a class="btn btn-primary px-4" href="https://goo.gl/maps/TSFRY1FHQkHWhtoK9" target="blank">Arahkan
-                        <i class="fa fa-arrow-right ms-2"></i></a>
+                    <p class="mb-2">
+                        {{$profile->alamat ? $profile->alamat : 'Cilangkap, Kec. Babakancikao, Kabupaten Purwakarta,
+                        Jawa Barat 41151' }}
+                    </p>
+                    @if($profile->maps)
+                    <a class="btn btn-primary px-4"
+                        href="{{ $profile->maps ? $profile->maps : 'https://goo.gl/maps/TSFRY1FHQkHWhtoK9'}} "
+                        target="blank">
+                        Arahkan
+                        <i class="fa fa-arrow-right ms-2"></i>
+                    </a>
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -80,7 +105,7 @@ Nuryeni | Solution To All Your Problems
                             </div>
                             <div class="ms-3">
                                 <h6>Telepon</h6>
-                                <span>(0264) 88305518</span>
+                                <span>{{ $profile->telepon ? $profile->telepon : '(0264)88305518'}}</span>
                             </div>
                         </div>
                     </div>
@@ -91,7 +116,7 @@ Nuryeni | Solution To All Your Problems
                             </div>
                             <div class="ms-3">
                                 <h6>Email</h6>
-                                <span>pt.nuryeni2018@gmail.com</span>
+                                <span>{{ $profile->email ? $profile->email : 'pt.nuryeni2018@gmail.com'}}</span>
                             </div>
                         </div>
                     </div>

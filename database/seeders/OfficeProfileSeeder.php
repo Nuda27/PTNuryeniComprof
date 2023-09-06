@@ -14,7 +14,7 @@ class OfficeProfileSeeder extends Seeder
     {
         OfficeProfile::create([
             'name' => 'PT. Nuryeni ',
-            'email' => 'pt.nuryeni@gmail.com',
+            'email' => 'pt.nuryeni2018@gmail.com',
             'telepon' => '(0264) 88305518',
             'alamat' => 'Cilangkap, Kec. Babakancikao, Kabupaten Purwakarta, Jawa Barat 41151',
             'whatsapp' => null,

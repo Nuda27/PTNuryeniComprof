@@ -16,6 +16,9 @@ class ServicesController extends Controller
 
             return DataTables::of($data)
                 ->addIndexColumn()
+                ->editColumn('description', function ($row) {
+                    return '<p class="white-space">' . $row->description . '</p>';
+                })
                 ->addColumn('file', function ($row) {
                     $image = '<img src="' . asset($row->file) . '" width="50px">';
                     return $image;
@@ -34,7 +37,7 @@ class ServicesController extends Controller
                     ';
                     return $btn;
                 })
-                ->rawColumns(['action', 'file'])
+                ->rawColumns(['action', 'file', 'description'])
                 ->make(true);
         }
         return view('pages.admin.services.index');

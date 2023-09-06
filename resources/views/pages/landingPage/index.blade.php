@@ -247,6 +247,7 @@ Nuryeni | Solution To All Your Problems
 
 
 <!-- Service Start -->
+@if(count($services) > 0)
 <div class="container-xxl py-5" id="service">
     <div class="container">
         <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -254,69 +255,32 @@ Nuryeni | Solution To All Your Problems
             <h1 class="display-5 mb-4">Kami Memberikan Pelayanan Terbaik</h1>
         </div>
         <div class="row gy-5 gx-4">
+
+            @foreach ($services as $service)
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <img class="img-fluid service-img-cover" src="{{ asset('assetsLanding/img/service-11.jpg') }}" alt="">
+                    <img class="img-fluid service-img-cover" src="{{ asset($service->file) }}" alt="">
                     <div class="service-img">
-                        <img class="img-fluid" src="{{ asset('assetsLanding/img/service-11.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset($service->file) }}" alt="">
                     </div>
                     <div class="service-detail">
                         <div class="service-title">
                             <hr class="w-25">
-                            <h3 class="mb-0">Wings Box</h3>
+                            <h3 class="mb-0">{{ $service->title }}</h3>
                             <hr class="w-25">
                         </div>
                         <div class="service-text">
-                            <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                                lorem sed diam stet diam sed stet.</p>
+                            <p class="text-white mb-0">{{$service->description}}</p>
                         </div>
                     </div>
                     {{-- <a class="btn btn-light" href="">Read More</a> --}}
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item">
-                    <img class="img-fluid service-img-cover" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
-                    <div class="service-img">
-                        <img class="img-fluid" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
-                    </div>
-                    <div class="service-detail">
-                        <div class="service-title">
-                            <hr class="w-25">
-                            <h3 class="mb-0">Excavator</h3>
-                            <hr class="w-25">
-                        </div>
-                        <div class="service-text">
-                            <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                                lorem sed diam stet diam sed stet.</p>
-                        </div>
-                    </div>
-                    {{-- <a class="btn btn-light" href="">Read More</a> --}}
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item">
-                    <img class="img-fluid service-img-cover" src="{{ asset('assetsLanding/img/service-3.jpg') }}" alt="">
-                    <div class="service-img">
-                        <img class="img-fluid" src="{{ asset('assetsLanding/img/service-3.jpg') }}" alt="">
-                    </div>
-                    <div class="service-detail">
-                        <div class="service-title">
-                            <hr class="w-25">
-                            <h3 class="mb-0">Forklift</h3>
-                            <hr class="w-25">
-                        </div>
-                        <div class="service-text">
-                            <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                                lorem sed diam stet diam sed stet.</p>
-                        </div>
-                    </div>
-                    {{-- <a class="btn btn-light" href="">Read More</a> --}}
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
+@endif
 <!-- Service End -->
 
 

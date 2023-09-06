@@ -15,17 +15,17 @@ class ServicesTableSeeder extends Seeder
         $data = [
             [
                 'title' => 'Komatsu PC200',
-                'description' => 'Excavator ini adalah Komatsu PC200',
+                'description' => 'Excavator ini adalah Komatsu PC200. Ini adalah mesin berat yang kuat digunakan untuk berbagai pekerjaan konstruksi.',
                 'file' => 'file/services/service-1.JPG',
             ],
             [
                 'title' => 'Caterpillar 320D',
-                'description' => 'Excavator ini adalah Caterpillar 320D',
+                'description' => 'Excavator ini adalah Caterpillar 320D. Caterpillar adalah merek terkenal dalam industri konstruksi',
                 'file' => 'file/services/service-2.JPG',
             ],
             [
-                'title' => 'Volvo EC200',
-                'description' => 'Excavator ini adalah Volvo EC200',
+                'title' => 'Truk forklift',
+                'description' => ' Forklift adalah sejenis truk yang dioperasikan untuk mengangkat, memindahkan, dan menurunkan barang-barang berat dari satu tempat ke tempat',
                 'file' => 'file/services/service-3.JPG',
             ],
         ];

@@ -13,8 +13,16 @@ class AboutController extends Controller
         if ($request->ajax()) {
             $data = About::all();
 
+            // white-space
+
             return DataTables::of($data)
                 ->addIndexColumn()
+                ->editColumn('title', function ($row) {
+                    return '<p class="white-space">' . $row->title . '</p>';
+                })
+                ->editColumn('description', function ($row) {
+                    return '<p class="white-space">' . $row->description . '</p>';
+                })
                 ->addColumn('action', function ($row) {
                     $btn = '
                     <div class="dropdown">
@@ -29,7 +37,7 @@ class AboutController extends Controller
                     ';
                     return $btn;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'title', 'description'])
                 ->make(true);
         }
 

@@ -58,6 +58,7 @@ Nuryeni | Solution To All Your Problems
 
 
 <!-- About Start -->
+@if($about)
 <div class="container-xxl py-5 about" id="about">
     <div class="container">
         <div class="row g-5">
@@ -68,16 +69,9 @@ Nuryeni | Solution To All Your Problems
             </div>
             <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
                 <p class="fw-medium text-uppercase text-primary mb-2">About</p>
-                <h1 class="display-5 mb-4">Kemudahan pemesanan alat berat terpercaya</h1>
-                <p class="mb-4">PT. Perkasa Sarana Utama (PSU) adalah perusahaan kontraktor umum dan sewa alat berat di
-                    Indonesia. Perusahaan didirikan
-                    pada 9 Januari 2004. Spesialisasi kami adalah menyediakan solusi sewa untuk konstruksi, industri,
-                    pertambangan dan pasar
-                    pemilik rumah. Kami bertujuan untuk menjadi perusahaan persewaan alat berat terkemuka dan
-                    menyediakan layanan satu atap
-                    untuk memberikan layanan, produk, dan solusi terintegrasi terbaik di kelasnya untuk memenuhi
-                    kebutuhan kami kebutuhan
-                    pelanggan.
+                <h1 class="display-5 mb-4">{{ $about->title }}</h1>
+                <p class="mb-4">
+                    {{ $about->description }}
                 </p>
                 <div class="row pt-2">
                     <div class="col-sm-7">
@@ -86,7 +80,7 @@ Nuryeni | Solution To All Your Problems
                                 <i class="fa fa-envelope-open text-white"></i>
                             </div>
                             <div class="ms-3">
-                                <p class="mb-2">Email us</p>
+                                <p class="mb-2">Email</p>
                                 <h6 class="mb-0">pt.nuryeni2018@gmail.com</h6>
                             </div>
                         </div>
@@ -97,7 +91,7 @@ Nuryeni | Solution To All Your Problems
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <div class="ms-3">
-                                <p class="mb-2">Call us</p>
+                                <p class="mb-2">Telepon</p>
                                 <h6 class="mb-0">(0264) 88305518</h6>
                             </div>
                         </div>
@@ -107,6 +101,7 @@ Nuryeni | Solution To All Your Problems
         </div>
     </div>
 </div>
+@endif
 <!-- About End -->
 
 
@@ -236,7 +231,9 @@ Nuryeni | Solution To All Your Problems
                         src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
                         alt="service">
                     <div class="service-img">
-                        <img class="img-fluid" src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="service">
+                        <img class="img-fluid"
+                            src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
+                            alt="service">
                     </div>
                     <div class="service-detail">
                         <div class="service-title">

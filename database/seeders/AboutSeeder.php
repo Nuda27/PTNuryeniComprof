@@ -15,14 +15,7 @@ class AboutSeeder extends Seeder
     {
         About::create([
             'title' => 'Kemudahan pemesanan alat berat terpercaya',
-            'description' => 'PT. Perkasa Sarana Utama (PSU) adalah
-                              perusahaan kontraktor umum dan sewa alat berat di Indonesia.
-                              Perusahaan didirikan pada 9 Januari 2004. Spesialisasi kami
-                              adalah menyediakan solusi sewa untuk konstruksi, industri,
-                              pertambangan dan pasar pemilik rumah. Kami bertujuan untuk menjadi
-                              perusahaan persewaan alat berat terkemuka dan menyediakan layanan
-                              satu atap untuk memberikan layanan, produk, dan solusi terintegrasi
-                              terbaik di kelasnya untuk memenuhi kebutuhan kami kebutuhan pelanggan.',
+            'description' => 'PT. Nuryeni adalah sebuah perusahaan yang bergerak dibidang Waste (LB3) management mulai dari jasa pengangkutan, pengumpulan dan pengelolaan limbah B3, serta jasa penyediaan, penyewaan alat berat dan jasa penyediaan bus karyawan.',
         ]);
     }
 }

@@ -54,6 +54,11 @@ h6,
 }
 
 
+.white-space {
+    white-space: pre-wrap !important;
+}
+
+
 /*** Button ***/
 .btn {
     transition: .5s;

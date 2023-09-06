@@ -64,7 +64,8 @@ Nuryeni | Solution To All Your Problems
         <div class="row g-5">
             <div class="col-lg-5">
                 <div class="position-relative me-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid w-100 about-img" src="{{ asset('assetsLanding/img/service-2.jpg') }}" alt="">
+                    <img class="img-fluid w-100 about-img"
+                        src="{{ asset($about->file ? $about->file  : 'assetsLanding/img/service-2.jpg') }}" alt="">
                 </div>
             </div>
             <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
@@ -81,7 +82,9 @@ Nuryeni | Solution To All Your Problems
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Email</p>
-                                <h6 class="mb-0">pt.nuryeni2018@gmail.com</h6>
+                                <h6 class="mb-0">
+                                    {{ $profile->email ? $profile->email : 'pt.nuryeni2018@gmail.com'}}
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -92,7 +95,9 @@ Nuryeni | Solution To All Your Problems
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Telepon</p>
-                                <h6 class="mb-0">(0264) 88305518</h6>
+                                <h6 class="mb-0">
+                                    {{ $profile->telepon ? $profile->telepon : '(0264)88305518'}}
+                                </h6>
                             </div>
                         </div>
                     </div>

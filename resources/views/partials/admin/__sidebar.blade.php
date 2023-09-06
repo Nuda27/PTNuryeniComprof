@@ -73,8 +73,8 @@
         </li>
 
         {{-- profile perusahaan --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/office-profile')) ? 'open active' : '' }}">
+            <a href="/admin/office-profile" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-building"></i>
                 <div data-i18n="Basic">Profile PT</div>
             </a>

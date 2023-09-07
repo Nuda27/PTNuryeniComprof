@@ -58,16 +58,16 @@
         </li>
 
         {{-- Project --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/project*')) ? 'open active' : '' }}">
+            <a href="/admin/project" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-notepad"></i>
                 <div data-i18n="Basic">Project</div>
             </a>
         </li>
 
         {{-- testimonial --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/testimonial')) ? 'open active' : '' }}">
+            <a href="/admin/testimonial" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Basic">Testimonial</div>
             </a>

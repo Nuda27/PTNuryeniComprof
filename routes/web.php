@@ -7,7 +7,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\OfficeProfileController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,6 +48,12 @@ Route::prefix('admin')->group(function () {
 
         //About
         route::resource('/about', AboutController::class, ['as' => 'admin']);
+
+        //Project
+        route::resource('/project', ProjectController::class, ['as' => 'admin']);
+
+        //Testimonial
+        route::resource('/testimonial', TestimoniController::class, ['as' => 'admin']);
 
         // contact
         route::resource('/office-profile', OfficeProfileController::class, ['as' => 'admin']);

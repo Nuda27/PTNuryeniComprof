@@ -66,7 +66,6 @@ class OfficeProfileController extends Controller
                 'youtube' => $request->youtube,
                 'maps' => $request->maps,
                 'about' => $request->about,
-
                 'logo' => $logo,
             ]);
 
@@ -76,7 +75,6 @@ class OfficeProfileController extends Controller
         } catch (\Throwable $th) {
             return back()->with(['error' => 'Data updated successfully']);
         }
-
     }
 
     /**

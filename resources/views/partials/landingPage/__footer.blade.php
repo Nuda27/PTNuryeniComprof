@@ -36,7 +36,7 @@
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
                     {{ $profile->telepon ? $profile->telepon : '(0264)88305518'}}
                 </p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ $profile->name ? $profile->name : 'PT Nuryeni' }}
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ $profile->email ? $profile->email : 'pt.nuryeni2018@gmail.com' }}
                 </p>
                 <div class="d-flex pt-3">
                     {{-- ig --}}
@@ -46,7 +46,6 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                     @endif
-
                     {{-- fb --}}
                     @if($profile->facebook)
                     <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->facebook }}"
@@ -54,7 +53,6 @@
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     @endif
-
                     {{-- yt --}}
                     @if($profile->youtube)
                     <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->youtube }}"
@@ -62,7 +60,6 @@
                         <i class="fab fa-youtube"></i>
                     </a>
                     @endif
-
                     {{-- linked --}}
                     @if($profile->linkedin)
                     <a class="btn btn-square btn-primary rounded-circle me-2" href="{{ $profile->linkedin }}"

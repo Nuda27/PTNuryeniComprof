@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Project;
 use App\Models\Services;
 
 class LandingPageController extends Controller
@@ -21,7 +22,10 @@ class LandingPageController extends Controller
         // get 1 data about
         $about = About::first();
 
-        return view('pages.landingPage.index', compact('services', 'about'));
+        // get 1 data project
+        $project = Project::first();
+
+        return view('pages.landingPage.index', compact('services', 'about', 'project'));
     }
 
     /**

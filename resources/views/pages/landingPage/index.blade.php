@@ -6,18 +6,23 @@ Nuryeni | Solution To All Your Problems
 
 @section('content')
 <!-- Carousel Start -->
+@if($carousels)
 <div class="container-fluid px-0 mb-5">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="{{ asset('assetsLanding/img/carousel-1.jpg') }}" alt="Image">
+
+            @foreach ($carousels as $index => $carousel)
+            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                <img class="w-100"
+                    src="{{ $carousel->file ? asset($carousel->file) : asset('assetsLanding/img/carousel-1.jpg') }}"
+                    alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">Solusi Sewa
-                                    Alat Berat</p>
-                                <h1 class="display-1 text-white mb-5 animated slideInRight">Sewa Alat Berat Berkualitas
+                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">{{
+                                    $carousel->title }}</p>
+                                <h1 class="display-1 text-white mb-5 animated slideInRight">{{ $carousel->subtitle }}
                                 </h1>
                                 <a href="{{ route('contact.index') }}"
                                     class="btn btn-primary py-3 px-5 animated slideInRight">Kontak Kami</a>
@@ -26,23 +31,8 @@ Nuryeni | Solution To All Your Problems
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img class="w-100" src="{{ asset('assetsLanding/img/carousel-2.jpg') }}" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">Solusi Sewa
-                                    Alat Berat</p>
-                                <h1 class="display-1 text-white mb-5 animated slideInRight">Harga Sewa Alat Berat
-                                    Lebih Murah</h1>
-                                <a href="{{ route('contact.index') }}"
-                                    class="btn btn-primary py-3 px-5 animated slideInRight">Kontak Kami</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,6 +44,7 @@ Nuryeni | Solution To All Your Problems
         </button>
     </div>
 </div>
+@endif
 <!-- Carousel End -->
 
 
@@ -276,36 +267,6 @@ Nuryeni | Solution To All Your Problems
                 <h5 class="text-primary mb-0">{{ $x->title }}</h5>
             </div>
         </a>
-        {{-- <a class="project-item" href="">
-            <img class="img-fluid" src="assetsLanding/img/project-2.jpg" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Civil Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="assetsLanding/img/project-3.jpg" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Gas Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="assetsLanding/img/project-4.jpg" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Power Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="assetsLanding/img/project-5.jpg" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Energy Engineering</h5>
-            </div>
-        </a>
-        <a class="project-item" href="">
-            <img class="img-fluid" src="assetsLanding/img/project-6.jpg" alt="">
-            <div class="project-title">
-                <h5 class="text-primary mb-0">Water Engineering</h5>
-            </div>
-        </a> --}}
     </div>
     @endforeach
 </div>

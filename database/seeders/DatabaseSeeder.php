@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ServicesTableSeeder::class);
         $this->call(AboutSeeder::class);
         $this->call(OfficeProfileSeeder::class);
-
+        $this->call(CarouselSeeder::class);
 
     }
 }

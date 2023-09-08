@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Carousel;
 use App\Models\Project;
 use App\Models\Services;
+use App\Models\Testimoni;
 
 class LandingPageController extends Controller
 {
@@ -25,7 +27,13 @@ class LandingPageController extends Controller
         // get 1 data project
         $project = Project::latest()->take('10')->get();
 
-        return view('pages.landingPage.index', compact('services', 'about', 'project'));
+        // get 4 carousel
+        $carousels = Carousel::latest()->take('4')->get();
+
+        // testimonial 4 aja
+        $testimonials = Testimoni::latest()->take('4')->get();
+
+        return view('pages.landingPage.index', compact('services', 'about', 'project', 'carousels', 'testimonials'));
     }
 
     /**

@@ -25,6 +25,10 @@ class OfficeProfileSeeder extends Seeder
             'maps' => 'https://goo.gl/maps/TSFRY1FHQkHWhtoK9',
             'logo' => 'file/profilePT/nyn.png',
             'about' => 'PT. Nuryeni adalah sebuah perusahaan yang bergerak dibidang Waste (LB3) management mulai dari penyewaan alat berat dll',
+            'pengalaman' => '0',
+            'anggota' => '0',
+            'penilaian' => '0',
+            'proyek' => '0',
         ]);
     }
 }

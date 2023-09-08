@@ -131,6 +131,56 @@
                             @enderror
                         </div>
 
+                        {{-- START PENILAIAN --}}
+                        <div class="mb-3 col-md-6">
+                            <label for="pengalaman" class="form-label">Tahun Pengalaman</label>
+                            <input class="form-control @error('pengalaman') is-invalid @enderror" type="text"
+                                id="pengalaman" name="pengalaman" value="{{ old('pengalaman') }}"
+                                placeholder="Masukan Berapa tahun pengalaman PT" autofocus />
+                            @error('pengalaman')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <label for="penilaian" class="form-label">Total Penilaian Positif</label>
+                            <input class="form-control @error('penilaian') is-invalid @enderror" type="text"
+                                id="penilaian" name="penilaian" value="{{ old('penilaian') }}"
+                                placeholder="Masukan total penilaian" autofocus />
+                            @error('penilaian')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <label for="proyek" class="form-label">Total Proyek Terselesaikan</label>
+                            <input class="form-control @error('proyek') is-invalid @enderror" type="text" id="proyek"
+                                name="proyek" value="{{ old('proyek') }}" placeholder="Masukan total proyek selesai"
+                                autofocus />
+                            @error('proyek')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <label for="anggota" class="form-label">Total Anggota/Karyawan</label>
+                            <input class="form-control @error('anggota') is-invalid @enderror" type="text" id="anggota"
+                                name="anggota" value="{{ old('anggota') }}" placeholder="Masukan total Anggota"
+                                autofocus />
+                            @error('anggota')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+                        {{-- END PENILAIAN --}}
+
                         <div class="mb-3 col-md-6">
                             <label for="about" class="form-label">Tentang PT Singkat</label>
                             <textarea name="about" id="about" cols="0" rows="2"

@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Testimoni extends Model
+class Carousel extends Model
 {
     use HasFactory;
 
-    protected $table = 'testimoni';
+    protected $table = 'carousels';
 
     protected $fillable = [
         'title',
-        'description',
-        'nama',
+        'subtitle',
         'file',
     ];
 }

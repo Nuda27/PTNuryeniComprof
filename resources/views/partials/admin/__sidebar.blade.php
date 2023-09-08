@@ -1,8 +1,10 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="/admin/dashboard" class="app-brand-link">
+            @if(isset($profile) && $profile->logo !== null)
             <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn"
                 class="app-brand-logo demo" width="75">
+            @endif
             <span class="app-brand-text demo menu-text fw-bolder ms-2">Nuryeni</span>
         </a>
 
@@ -26,8 +28,8 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Content</span></li>
 
         {{-- Carousel --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/carousel')) ? 'open active' : '' }}">
+            <a href="/admin/carousel" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-image"></i>
                 <div data-i18n="Basic">Carousel</div>
             </a>

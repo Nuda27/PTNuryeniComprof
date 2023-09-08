@@ -23,7 +23,7 @@ class LandingPageController extends Controller
         $about = About::first();
 
         // get 1 data project
-        $project = Project::first();
+        $project = Project::latest()->take('10')->get();
 
         return view('pages.landingPage.index', compact('services', 'about', 'project'));
     }

@@ -25,7 +25,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'title' => 'Forklift',
-                'description' => ' Forklift adalah sejenis truk yang dioperasikan untuk mengangkat, memindahkan, dan menurunkan barang-barang berat dari satu tempat ke tempat',
+                'description' => 'Forklift adalah sejenis truk yang dioperasikan untuk mengangkat, memindahkan, dan menurunkan barang-barang berat dari satu tempat ke tempat',
                 'file' => 'file/services/service-3.JPG',
             ],
         ];

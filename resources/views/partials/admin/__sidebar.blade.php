@@ -42,8 +42,8 @@
         </li>
 
         {{-- Why Choose --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/whychoose')) ? 'open active' : '' }}">
+            <a href="/admin/whychoose" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-question-mark"></i>
                 <div data-i18n="Basic">Why Choose</div>
             </a>

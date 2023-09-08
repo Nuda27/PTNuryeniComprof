@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ContactAdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
@@ -61,6 +62,9 @@ Route::prefix('admin')->group(function () {
 
         // contact
         route::resource('/office-profile', OfficeProfileController::class, ['as' => 'admin']);
+
+        // carousel
+        route::resource('/carousel', CarouselController::class, ['as' => 'admin']);
 
     });
 });

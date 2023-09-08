@@ -26,8 +26,8 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Content</span></li>
 
         {{-- Carousel --}}
-        <li class="menu-item {{ (request()->is('')) ? 'open active' : '' }}">
-            <a href="#" class="menu-link">
+        <li class="menu-item {{ (request()->is('admin/carousel')) ? 'open active' : '' }}">
+            <a href="/admin/carousel" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-image"></i>
                 <div data-i18n="Basic">Carousel</div>
             </a>

@@ -253,22 +253,23 @@ Nuryeni | Solution To All Your Problems
 
 
 <!-- Project Start -->
-@if (count($project) > 0)
+@if ($project)
 <div class="container-fluid bg-dark pt-5 my-5 px-0">
     <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
         <p class="fw-medium text-uppercase text-primary mb-2">PROYEK KAMI</p>
         <h1 class="display-5 text-white mb-5">Proyek Yang Kami Selesaikan</h1>
     </div>
-    @foreach ($project as $x)
     <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
+        @foreach ($project as $x)
         <a class="project-item" href="">
-            <img class="img-fluid" src="assetsLanding/img/project-1.jpg" alt="">
+            <img class="img-fluid" src="{{ $x->file ? asset($x->file) : asset('assetsLanding/img/placeholder.jpg') }}"
+                alt="">
             <div class="project-title">
                 <h5 class="text-primary mb-0">{{ $x->title }}</h5>
             </div>
         </a>
+        @endforeach
     </div>
-    @endforeach
 </div>
 @endif
 <!-- Project End -->

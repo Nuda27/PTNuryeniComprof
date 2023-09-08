@@ -25,6 +25,10 @@ class DatabaseSeeder extends Seeder
         $this->call(AboutSeeder::class);
         $this->call(OfficeProfileSeeder::class);
         $this->call(CarouselSeeder::class);
+        $this->call(TestimonialSeeder::class);
+        $this->call(ProjectSeeder::class);
+
+
 
     }
 }

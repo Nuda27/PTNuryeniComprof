@@ -18,11 +18,11 @@ Create WhyChoose
             <div class="card-body">
                 <form action="{{ route('admin.whychoose.store') }}" id="formAccountSettings" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="row">
+                    <div class="row input">
                         <div class="mb-3 col-md-12">
                             <label for="firstName" class="form-label">Tittle</label>
                             <input class="form-control  @error('title') is-invalid @enderror" type="text" id="firstName"
-                                name="title" value="{{ old('title') }}" autofocus />
+                                name="title[]" value="{{ old('title[]') }}" autofocus />
                             @error('title')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -32,7 +32,7 @@ Create WhyChoose
                         <div class="mb-3 col-md-12">
                             <label for="email" class="form-label">Description</label>
                             <textarea class="form-control  @error('description') is-invalid @enderror" id="description"
-                                name="description" value="{{ old('description') }}" placeholder=""></textarea>
+                                name="description[]" value="{{ old('description[]') }}" placeholder=""></textarea>
                             @error('description')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -41,6 +41,7 @@ Create WhyChoose
                         </div>
                     </div>
                     <div class="mt-2">
+                        <a class="btn btn-outline-primary add_field">Tambah Opsi</a>
                         <button type="submit" class="btn btn-primary me-2">Simpan</button>
                     </div>
                 </form>
@@ -50,4 +51,31 @@ Create WhyChoose
 
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).on('click', '.add_field', function() {
+        $(`<br><div class="row input">
+                        <div class="mb-3 col-md-12">
+                            <label for="firstName" class="form-label">Tittle</label>
+                            <input class="form-control  @error('title') is-invalid @enderror" type="text" id="firstName"
+                                name="title[]" value="{{ old('title[]') }}" autofocus />
+                            @error('title')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label for="email" class="form-label">Description</label>
+                            <textarea class="form-control  @error('description') is-invalid @enderror" id="description"
+                                name="description[]" value="{{ old('description[]') }}" placeholder=""></textarea>
+                            @error('description')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+                    </div>`).insertAfter('.input:last');
+    })
+</script>
 @endsection

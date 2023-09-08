@@ -19,11 +19,13 @@ Edit WhyChoose
                 <form action="{{ route('admin.whychoose.update', $whychoose->id) }}" id="formAccountSettings" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
+                    @foreach ($data as $x)
                     <div class="row">
+                        <input type="hidden" name="id[]" value="{{$x->id}}">
                         <div class="mb-3 col-md-12">
                             <label for="firstName" class="form-label">Tittle</label>
                             <input class="form-control  @error('title') is-invalid @enderror" type="text" id="firstName"
-                                name="title" value="{{ old('title', $whychoose->title ) }}" autofocus />
+                                name="title[]" value="{{ old('title[]', $x->title ) }}" autofocus />
                             @error('title')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -33,7 +35,7 @@ Edit WhyChoose
                         <div class="mb-3 col-md-12">
                             <label for="email" class="form-label">Description</label>
                             <textarea class="form-control  @error('description') is-invalid @enderror" id="description"
-                                name="description" value="{{ old('description' ) }}" placeholder="">{{ $whychoose->description }}</textarea>
+                                name="description[]" value="{{ old('description[]' ) }}" placeholder="">{{ $x->description }}</textarea>
                             @error('description')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -41,6 +43,8 @@ Edit WhyChoose
                             @enderror
                         </div>
                     </div>
+                    @endforeach
+
                     <div class="mt-2">
                         <button type="submit" class="btn btn-primary me-2">Simpan</button>
                     </div>

@@ -26,6 +26,12 @@ return new class extends Migration
             $table->string('maps')->nullable();
             $table->text('logo')->nullable();
             $table->text('about')->nullable();
+
+            $table->text('pengalaman')->nullable();
+            $table->text('anggota')->nullable();
+            $table->text('penilaian')->nullable();
+            $table->text('proyek')->nullable();
+
             $table->timestamps();
         });
     }

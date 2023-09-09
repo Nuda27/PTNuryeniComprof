@@ -32,6 +32,7 @@ class WhychooseController extends Controller
                               <i class="bx bx-dots-vertical-rounded"></i>
                             </button>
                             <div class="dropdown-menu">
+                              <a class="dropdown-item" href="' . route('admin.whychoose.show', $row->id) . '"><i class="bx bx-show me-1"></i> Detail</a>
                               <a class="dropdown-item" href="' . route('admin.whychoose.edit', $row->id) . '"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                               <a class="dropdown-item" href="javascript:hapus(\'' . $row->id . '\')"><i class="bx bx-trash me-1"></i> Delete</a>
                             </div>
@@ -167,6 +168,21 @@ class WhychooseController extends Controller
             return back()->with(['error' => 'Data gagal dihapus.']);
         }
     }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        // get
+        $whychoose = Whychoose::findOrFail($id);
+
+        // get detail
+        $whychooseDetail = whychooseDetail::where('whychoose_id', $whychoose->id)->paginate(5);
+
+        return view('pages.admin.whychoose.show', compact('whychoose', 'whychooseDetail'));
+    }
+
 }
 
 // =======================================================

@@ -5,7 +5,7 @@ Create WhyChoose
 @endsection
 
 @section('content')
-<a href="{{ route('admin.services.index') }}" type="button" class="btn btn-primary mb-3 ">
+<a href="{{ route('admin.whychoose.index') }}" type="button" class="btn btn-primary mb-3 ">
     Kembali
 </a>
 
@@ -16,13 +16,14 @@ Create WhyChoose
 
             <hr class="my-0" />
             <div class="card-body">
-                <form action="{{ route('admin.whychoose.store') }}" id="formAccountSettings" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.whychoose.store') }}" id="formAccountSettings" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="row input">
                         <div class="mb-3 col-md-12">
                             <label for="firstName" class="form-label">Tittle</label>
                             <input class="form-control  @error('title') is-invalid @enderror" type="text" id="firstName"
-                                name="title[]" value="{{ old('title[]') }}" autofocus />
+                                name="title[]" value="{{ old('title[]') }}" autofocus required/>
                             @error('title')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -32,7 +33,7 @@ Create WhyChoose
                         <div class="mb-3 col-md-12">
                             <label for="email" class="form-label">Description</label>
                             <textarea class="form-control  @error('description') is-invalid @enderror" id="description"
-                                name="description[]" value="{{ old('description[]') }}" placeholder=""></textarea>
+                                name="description[]" value="{{ old('description[]') }}" placeholder="" required></textarea>
                             @error('description')
                             <div class="invalid-feedback">
                                 {{ $message }}

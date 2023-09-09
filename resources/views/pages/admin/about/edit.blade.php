@@ -5,7 +5,7 @@ Edit About
 @endsection
 
 @section('content')
-<a href="{{ route('admin.services.index') }}" type="button" class="btn btn-primary mb-3 ">
+<a href="{{ route('admin.about.index') }}" type="button" class="btn btn-primary mb-3 ">
     Kembali
 </a>
 

@@ -70,17 +70,15 @@ Detail WhyChoose
                                 <td>{{ $item->description }}</td>
                                 <td>
                                     <div class="dropdown">
-                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                            data-bs-toggle="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item"
-                                                href="/admin/whychoose/{{ $whychoose->id }}/whyitem/{{ $item->id}}/edit">
+                                            <a class="dropdown-item" href="/admin/whychoose/{{ $whychoose->id }}/whyitem/{{ $item->id}}/edit">
                                                 <i class="bx bx-edit-alt me-1"></i>
                                                 Edit
                                             </a>
-                                            <a class="dropdown-item" href="javascript:hapus(\'' . $row->id . '\')">
+                                            <a class="dropdown-item delete" href="#" data-id="{{ $item->id }}" data-id1="{{ $whychoose->id }}">
                                                 <i class="bx bx-trash me-1"></i>
                                                 Delete
                                             </a>
@@ -99,3 +97,38 @@ Detail WhyChoose
     </div>
 </div>
 @endsection
+
+
+
+@push('scripts')
+<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script type="text/javascript">
+    $('.delete').click(function() {
+
+        var id1 = $(this).attr('data-id1');
+        var id2 = $(this).attr('data-id');
+
+        Swal.fire({
+            title: 'Apakah Anda Yakin?'
+            , text: "Ingin Menghapus Data Ini!"
+            , icon: 'warning'
+            , showCancelButton: true
+            , confirmButtonColor: '#3085d6'
+            , cancelButtonColor: '#d33'
+            , confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = "/admin/whychoose/" + id1 + "/whyitem/" + id2;
+
+                swal("Data berhasil dihapus!", {
+                    icon: "success"
+                , });
+            }
+        })
+
+    });
+
+</script>
+@endpush

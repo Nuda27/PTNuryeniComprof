@@ -270,6 +270,31 @@ class WhychooseController extends Controller
         }
     }
 
+    /**
+     * destroyWhyItem
+     *
+     * @param  mixed $whychoose
+     * @param  mixed $whychooseDetail
+     * @return void
+     */
+    public function destroyWhyItem(Whychoose $whychoose, whychooseDetail $whychooseDetail)
+    {
+        try {
+            $data = whychooseDetail::find($whychooseDetail->id);
+
+            // delete data
+            $data->delete();
+
+            // delete file
+            File::delete($data->file);
+
+            return redirect()->route('admin.whychoose.show', $whychoose->id)->with('success', 'WhyChoose deleted successfully');
+
+        } catch (\Throwable $th) {
+            return back()->with(['error' => 'Data gagal dihapus.']);
+        }
+    }
+
 }
 
 // =======================================================

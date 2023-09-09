@@ -27,8 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CarouselSeeder::class);
         $this->call(TestimonialSeeder::class);
         $this->call(ProjectSeeder::class);
-
-
+        $this->call(WhychooseSeeder::class);
 
     }
 }

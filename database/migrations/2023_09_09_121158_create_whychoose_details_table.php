@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('whychoose', function (Blueprint $table) {
+        Schema::create('whychoose_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('whychoose_id')->references('id')->on('whychoose')->cascadeOnDelete();
             $table->string('title');
-            $table->string('subtitle');
-            $table->text('file');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('whychoose');
+        Schema::dropIfExists('whychoose_details');
     }
 };

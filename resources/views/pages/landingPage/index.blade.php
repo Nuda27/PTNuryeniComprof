@@ -13,9 +13,7 @@ Nuryeni | Solution To All Your Problems
 
             @foreach ($carousels as $index => $carousel)
             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                <img class="w-100"
-                    src="{{ $carousel->file ? asset($carousel->file) : asset('assetsLanding/img/carousel-1.jpg') }}"
-                    alt="Image">
+                <img class="w-100" src="{{ $carousel->file ? asset($carousel->file) : asset('assetsLanding/img/carousel-1.jpg') }}" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -24,8 +22,7 @@ Nuryeni | Solution To All Your Problems
                                     $carousel->title }}</p>
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">{{ $carousel->subtitle }}
                                 </h1>
-                                <a href="{{ route('contact.index') }}"
-                                    class="btn btn-primary py-3 px-5 animated slideInRight">Kontak Kami</a>
+                                <a href="{{ route('contact.index') }}" class="btn btn-primary py-3 px-5 animated slideInRight">Kontak Kami</a>
                             </div>
                         </div>
                     </div>
@@ -55,8 +52,7 @@ Nuryeni | Solution To All Your Problems
         <div class="row g-5">
             <div class="col-lg-5">
                 <div class="position-relative me-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid w-100 about-img"
-                        src="{{ asset($about->file ? $about->file : 'assetsLanding/img/service-2.jpg') }}" alt="">
+                    <img class="img-fluid w-100 about-img" src="{{ asset($about->file ? $about->file : 'assetsLanding/img/service-2.jpg') }}" alt="">
                 </div>
             </div>
             <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
@@ -138,75 +134,40 @@ Nuryeni | Solution To All Your Problems
 
 
 <!-- Features Start -->
+@if ($whychoose)
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative me-lg-4">
-                    <img class="img-fluid w-100" src="{{ asset('assetsLanding/img/feature.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="object-fit: cover; object-position: center; height: 686px" src="{{ asset($whychoose->file ? $whychoose->file : 'assetsLanding/img/service-2.jpg') }}" alt="">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <p class="fw-medium text-uppercase text-primary mb-2">MENGAPA MEMILIH KAMI</p>
-                <h1 class="display-5 mb-4">Beberapa Alasan Mengapa Orang Memilih Kami</h1>
-                {{-- <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
-                    et
-                    eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                </p> --}}
+                <p class="fw-medium text-uppercase text-primary mb-2">{{ $whychoose->title }}</p>
+                <h1 class="display-5 mb-4">{{ $whychoose->subtitle }}</h1>
                 <div class="row gy-4">
+
+                    @foreach ($whychooseDetail as $item)
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa fa-check text-white"></i>
                             </div>
                             <div class="ms-4">
-                                <h4>Experienced Workers</h4>
-                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                                    dolore erat amet</span>
+                                <h4>{{ $item->title }}</h4>
+                                <span>{{ $item->description }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                                <i class="fa fa-check text-white"></i>
-                            </div>
-                            <div class="ms-4">
-                                <h4>Reliable Industrial Services</h4>
-                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                                    dolore erat amet</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                                <i class="fa fa-check text-white"></i>
-                            </div>
-                            <div class="ms-4">
-                                <h4>24/7 Customer Support</h4>
-                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                                    dolore erat amet</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
-                                <i class="fa fa-check text-white"></i>
-                            </div>
-                            <div class="ms-4">
-                                <h4>Customer Support</h4>
-                                <span>Erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                                    dolore erat amet</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endif
 <!-- Features End -->
 
 
@@ -223,13 +184,9 @@ Nuryeni | Solution To All Your Problems
             @foreach ($services as $service)
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <img class="img-fluid service-img-cover"
-                        src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
-                        alt="service">
+                    <img class="img-fluid service-img-cover" src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="service">
                     <div class="service-img">
-                        <img class="img-fluid"
-                            src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
-                            alt="service">
+                        <img class="img-fluid" src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="service">
                     </div>
                     <div class="service-detail">
                         <div class="service-title">
@@ -262,8 +219,7 @@ Nuryeni | Solution To All Your Problems
     <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
         @foreach ($project as $x)
         <a class="project-item" href="">
-            <img class="img-fluid" src="{{ $x->file ? asset($x->file) : asset('assetsLanding/img/placeholder.jpg') }}"
-                alt="">
+            <img class="img-fluid" src="{{ $x->file ? asset($x->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="">
             <div class="project-title">
                 <h5 class="text-primary mb-0">{{ $x->title }}</h5>
             </div>
@@ -288,8 +244,7 @@ Nuryeni | Solution To All Your Problems
             @foreach ($testimonials as $testi)
             <div class="testimonial-item text-center">
                 <div class="testimonial-img position-relative">
-                    <img class="img-fluid rounded-circle mx-auto mb-5"
-                        src="{{ $testi->file ? asset($testi->file) : asset('assetsLanding/img/placeholder.jpg') }}">
+                    <img class="img-fluid rounded-circle mx-auto mb-5" src="{{ $testi->file ? asset($testi->file) : asset('assetsLanding/img/placeholder.jpg') }}">
                     <div class="btn-square bg-primary rounded-circle">
                         <i class="fa fa-quote-left text-white"></i>
                     </div>
@@ -307,4 +262,36 @@ Nuryeni | Solution To All Your Problems
 </div>
 @endif
 <!-- Testimonial End -->
+
+
+
+{{-- Client Start--}}
+@if (count($clients) > 0)
+<section class="bg-light mb-0">
+    <div class="container-xxl p-4 px-lg-5 py-5">
+
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fw-medium text-uppercase text-primary mb-2">Client</p>
+            <h1 class="display-5 mb-5">Telah Dipercaya Oleh</h1>
+        </div>
+
+        <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+
+            @foreach ($clients as $client)
+            <div class="col-4 col-lg-2">
+                <div class="card bg-transparent border-0">
+                    <div class="card-body py-1">
+                        <img class="img-fluid mx-auto mb-5" src="{{ $client->file ? asset($client->file) : asset('assetsLanding/img/placeholder.jpg') }}">
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
+@endif
+
+
+{{-- client end --}}
 @endsection

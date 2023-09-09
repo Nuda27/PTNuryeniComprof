@@ -60,6 +60,15 @@ Route::prefix('admin')->group(function () {
         //WhyChoose
         route::resource('/whychoose', WhychooseController::class, ['as' => 'admin']);
 
+        Route::get('/whychoose/{id}/whyitem/create', [WhychooseController::class, 'createWhyItem'])->name('whyItem.create');
+        Route::post('/whychoose/{id}/whyitem/store', [WhychooseController::class, 'storeWhyItem'])->name('whyItem.store');
+
+        Route::get('/whychoose/{whychoose}/whyitem/{whychooseDetail}/edit', [WhychooseController::class, 'editWhyItem']);
+
+        Route::put('/whychoose/{whychoose}/whyitem/{whychooseDetail}/update', [WhychooseController::class, 'updateWhyItem']);
+
+        Route::get('/whychoose/{whychoose}/whyitem/{whychooseDetail}', [WhychooseController::class, 'destroyWhyItem']);
+
         // contact
         route::resource('/office-profile', OfficeProfileController::class, ['as' => 'admin']);
 

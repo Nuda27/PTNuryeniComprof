@@ -12,41 +12,53 @@ Edit WhyChoose
 <div class="row">
     <div class="col-md-12">
         <div class="card mb-4">
-            <h5 class="card-header">Create WhyChoose</h5>
+            <h5 class="card-header">Update WhyChoose</h5>
 
             <hr class="my-0" />
             <div class="card-body">
-                <form action="{{ route('admin.whychoose.update', $whychoose->id) }}" id="formAccountSettings" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.whychoose.update', $whychoose->id) }}" id="formAccountSettings"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
+
                     @method('PUT')
-                    @foreach ($data as $x)
-                    <div class="row">
-                        <input type="hidden" name="id[]" value="{{$x->id}}">
+                    <div class="row mb-4">
                         <div class="mb-3 col-md-12">
-                            <label for="firstName" class="form-label">Tittle</label>
-                            <input class="form-control  @error('title') is-invalid @enderror" type="text" id="firstName"
-                                name="title[]" value="{{ old('title[]', $x->title ) }}" autofocus />
+                            <label for="firstName" class="form-label">Title</label>
+                            <input class="form-control  @error('title') is-invalid @enderror" type="text"
+                                id="firstName" name="title" value="{{ old('title', $whychoose->title) }}"
+                                autofocus />
                             @error('title')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
+
                         <div class="mb-3 col-md-12">
-                            <label for="email" class="form-label">Description</label>
-                            <textarea class="form-control  @error('description') is-invalid @enderror" id="description"
-                                name="description[]" value="{{ old('description[]' ) }}" placeholder="">{{ $x->description }}</textarea>
-                            @error('description')
+                            <label for="subtitle" class="form-label">Subtitle</label>
+                            <textarea class="form-control  @error('subtitle') is-invalid @enderror" id="subtitle"
+                                name="subtitle">{{ old('subtitle', $whychoose->subtitle) }}</textarea>
+                            @error('subtitle')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3 col-md-12">
+                            <label for="formFile" class="form-label @error('file') is-invalid @enderror">Upload
+                                Foto</label>
+                            <input class="form-control" type="file" id="formFile" name="file"
+                                value="{{ old('file') }}" />
+                            @error('file')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
                     </div>
-                    @endforeach
 
                     <div class="mt-2">
-                        <button type="submit" class="btn btn-primary me-2">Simpan</button>
+                        <button type="submit" class="btn btn-primary me-2">Update</button>
                     </div>
                 </form>
             </div>

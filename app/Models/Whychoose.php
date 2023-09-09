@@ -13,6 +13,7 @@ class Whychoose extends Model
 
     protected $fillable = [
         'title',
-        'description',
+        'subtitle',
+        'file',
     ];
 }

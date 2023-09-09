@@ -1,53 +1,54 @@
 @extends('layouts.layout_admin')
 
 @section('title')
-    Whychoose
+Whychoose
 @endsection
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data WhyChoose</h4>
+<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Data WhyChoose</h4>
 
-    <a href="{{ route('admin.whychoose.create') }}" type="button" class="btn btn-primary mb-3 ">
-        <span class="tf-icons bx bx-plus-circle"></span>&nbsp; Tambah
-    </a>
+<a href="{{ route('admin.whychoose.create') }}" type="button" class="btn btn-primary mb-3 ">
+    <span class="tf-icons bx bx-plus-circle"></span>&nbsp; Tambah
+</a>
 
-    <div class="card">
-        <h5 class="card-header">Data WhyChoose</h5>
+<div class="card">
+    <h5 class="card-header">Data WhyChoose</h5>
 
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered data-table nowrap w-100">
-                    <thead>
-                        <tr>
-                            <th width="5%">No</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th width="10%">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered data-table nowrap w-100">
+                <thead>
+                    <tr>
+                        <th width="5%">No</th>
+                        <th>Title</th>
+                        <th>Subtile</th>
+                        <th>Gambar</th>
+                        <th width="10%">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
-
     </div>
 
-    {{-- form delete --}}
-    <form id="delete-form" method="post">
-        @csrf
-        @method('DELETE')
-    </form>
+</div>
+
+{{-- form delete --}}
+<form id="delete-form" method="post">
+    @csrf
+    @method('DELETE')
+</form>
 @endsection
 
 @push('scripts')
-    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script type="text/javascript">
-        $(function() {
+<script type="text/javascript">
+    $(function() {
             var table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
@@ -58,9 +59,13 @@
                         data: 'title',
                         name: 'title'
                     },  {
-                        data: 'description',
-                        name: 'description',
-                    },{
+                        data: 'subtitle',
+                        name: 'subtitle',
+                    }, {
+                        data: 'file',
+                        name: 'file',
+                    },
+                    {
                         data: 'action',
                         name: 'action',
                         orderable: false,
@@ -92,5 +97,5 @@
             })
 
         }
-    </script>
+</script>
 @endpush

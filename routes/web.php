@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CarouselController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactAdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
@@ -64,9 +65,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/whychoose/{id}/whyitem/store', [WhychooseController::class, 'storeWhyItem'])->name('whyItem.store');
 
         Route::get('/whychoose/{whychoose}/whyitem/{whychooseDetail}/edit', [WhychooseController::class, 'editWhyItem']);
-
         Route::put('/whychoose/{whychoose}/whyitem/{whychooseDetail}/update', [WhychooseController::class, 'updateWhyItem']);
-
         Route::get('/whychoose/{whychoose}/whyitem/{whychooseDetail}', [WhychooseController::class, 'destroyWhyItem']);
 
         // contact
@@ -74,6 +73,10 @@ Route::prefix('admin')->group(function () {
 
         // carousel
         route::resource('/carousel', CarouselController::class, ['as' => 'admin']);
+
+        // clients
+        route::resource('/client', ClientController::class, ['as' => 'admin']);
+
 
     });
 });
@@ -85,5 +88,6 @@ Route::get('/service', [LandingPageController::class, 'service'])->name('home.se
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
 
 require __DIR__ . '/auth.php';

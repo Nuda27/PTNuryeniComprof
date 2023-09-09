@@ -2,8 +2,7 @@
     <div class="app-brand demo">
         <a href="/admin/dashboard" class="app-brand-link">
             @if(isset($profile) && $profile->logo !== null)
-            <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn"
-                class="app-brand-logo demo" width="75">
+            <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn" class="app-brand-logo demo" width="75">
             @endif
             <span class="app-brand-text demo menu-text fw-bolder ms-2">Nuryeni</span>
         </a>
@@ -74,6 +73,15 @@
                 <div data-i18n="Basic">Testimonial</div>
             </a>
         </li>
+
+        {{-- Client --}}
+        <li class="menu-item {{ (request()->is('admin/client*')) ? 'open active' : '' }}">
+            <a href="/admin/client" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-flag"></i>
+                <div data-i18n="Basic">Client</div>
+            </a>
+        </li>
+
 
         {{-- profile perusahaan --}}
         <li class="menu-item {{ (request()->is('admin/office-profile')) ? 'open active' : '' }}">

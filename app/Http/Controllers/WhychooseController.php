@@ -178,9 +178,96 @@ class WhychooseController extends Controller
         $whychoose = Whychoose::findOrFail($id);
 
         // get detail
-        $whychooseDetail = whychooseDetail::where('whychoose_id', $whychoose->id)->paginate(5);
+        $whychooseDetail = whychooseDetail::where('whychoose_id', $whychoose->id)->get();
 
         return view('pages.admin.whychoose.show', compact('whychoose', 'whychooseDetail'));
+    }
+
+    /**
+     * createWhyItem
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function createWhyItem(string $id)
+    {
+        // get
+        $whychoose = Whychoose::findOrFail($id);
+
+        return view('pages.admin.whychoose.detail.create', compact('whychoose'));
+    }
+
+    /**
+     * storeWhyItem
+     *
+     * @param  mixed $request
+     * @param  mixed $id
+     * @return void
+     */
+    public function storeWhyItem(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required|max:255',
+        ]);
+
+        try {
+
+            whychooseDetail::create([
+                'whychoose_id' => $id,
+                'title' => $request->title,
+                'description' => $request->description,
+            ]);
+
+            return redirect()->route('admin.whychoose.show', $id)->with('success', 'WhyChoose Item created successfully');
+
+        } catch (\Throwable $th) {
+            return back()->with(['error' => 'Data gagal disimpan.']);
+        }
+
+    }
+
+    /**
+     * editWhyItem
+     *
+     * @param  mixed $whychoose
+     * @param  mixed $whychooseDetail
+     * @return void
+     */
+    public function editWhyItem(Whychoose $whychoose, whychooseDetail $whychooseDetail)
+    {
+        return view('pages.admin.whychoose.detail.edit', compact('whychoose', 'whychooseDetail'));
+    }
+
+    /**
+     * updateWhyItem
+     *
+     * @param  mixed $request
+     * @param  mixed $whychoose
+     * @param  mixed $whychooseDetail
+     * @return void
+     */
+    public function updateWhyItem(Request $request, Whychoose $whychoose, whychooseDetail $whychooseDetail)
+    {
+        //validate
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required|max:255',
+        ]);
+
+        try {
+
+            // update
+            $whychooseDetail->update([
+                'title' => $request->title,
+                'description' => $request->description,
+            ]);
+
+            return redirect()->route('admin.whychoose.show', $whychoose->id)->with('success', 'WhyChoose updated successfully');
+
+        } catch (\Throwable $th) {
+            return back()->with(['error' => 'Data gagal diperbarui.']);
+        }
     }
 
 }

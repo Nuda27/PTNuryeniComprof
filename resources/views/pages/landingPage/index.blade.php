@@ -266,6 +266,7 @@ Nuryeni | Solution To All Your Problems
 
 
 {{-- Client Start--}}
+@if (count($clients) > 0)
 <section class="bg-light mb-0">
     <div class="container-xxl p-4 px-lg-5 py-5">
 
@@ -275,71 +276,22 @@ Nuryeni | Solution To All Your Problems
         </div>
 
         <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('logo/nyn.png') }}">
-                    </div>
-                </div>
-            </div>
 
+            @foreach ($clients as $client)
             <div class="col-4 col-lg-2">
                 <div class="card bg-transparent border-0">
                     <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
+                        <img class="img-fluid mx-auto mb-5" src="{{ $client->file ? asset($client->file) : asset('assetsLanding/img/placeholder.jpg') }}">
                     </div>
                 </div>
             </div>
-
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 col-lg-2">
-                <div class="card bg-transparent border-0">
-                    <div class="card-body py-1">
-                        <img class="img-fluid mx-auto mb-5" src="{{  asset('assetsLanding/img/placeholder.jpg') }}">
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
 
         </div>
     </div>
 </section>
+@endif
+
+
 {{-- client end --}}
 @endsection

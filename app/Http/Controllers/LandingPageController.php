@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Carousel;
+use App\Models\Client;
 use App\Models\Project;
 use App\Models\Services;
 use App\Models\Testimoni;
@@ -41,7 +42,10 @@ class LandingPageController extends Controller
         // get detail whychoose
         $whychooseDetail = whychooseDetail::where('whychoose_id', $whychoose->id)->take('4')->get();
 
-        return view('pages.landingPage.index', compact('services', 'about', 'project', 'carousels', 'testimonials', 'whychoose', 'whychooseDetail'));
+        // client
+        $clients = Client::latest()->take('20')->get();
+
+        return view('pages.landingPage.index', compact('services', 'about', 'project', 'carousels', 'testimonials', 'whychoose', 'whychooseDetail', 'clients'));
     }
 
     /**

@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TestimonialSeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(WhychooseSeeder::class);
+        $this->call(ClientSeeder::class);
+
 
     }
 }

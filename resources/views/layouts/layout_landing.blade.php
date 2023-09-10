@@ -10,6 +10,7 @@
 
     <!-- Favicon -->
     {{-- <link href="{{ asset('assetsLanding/favicon.ico') }}" rel="icon"> --}}
+    <link rel="shortcut icon" href="{{ asset('assetsLanding/img/logo.png') }}">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

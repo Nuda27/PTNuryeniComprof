@@ -12,6 +12,7 @@ use App\Http\Controllers\OfficeProfileController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\StrukturController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WhychooseController;
@@ -80,6 +81,9 @@ Route::prefix('admin')->group(function () {
 
         //News
         route::resource('/news', BeritaController::class, ['as' => 'admin']);
+
+        //Struktur
+        route::resource('/structure', StrukturController::class, ['as' => 'admin']);
     });
 });
 

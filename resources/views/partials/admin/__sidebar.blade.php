@@ -1,8 +1,9 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="/admin/dashboard" class="app-brand-link">
-            @if(isset($profile) && $profile->logo !== null)
-            <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn" class="app-brand-logo demo" width="75">
+            @if (isset($profile) && $profile->logo !== null)
+                <img src="{{ $profile->logo ? asset($profile->logo) : asset('logo/nyn.png') }}" alt="nyn"
+                    class="app-brand-logo demo" width="75">
             @endif
             <span class="app-brand-text demo menu-text fw-bolder ms-2">Nuryeni</span>
         </a>
@@ -16,7 +17,7 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item {{ (request()->is('admin/dashboard')) ? 'active' : '' }} ">
+        <li class="menu-item {{ request()->is('admin/dashboard') ? 'active' : '' }} ">
             <a href="/admin/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
@@ -27,23 +28,31 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Content</span></li>
 
         {{-- Carousel --}}
-        <li class="menu-item {{ (request()->is('admin/carousel')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/carousel') ? 'open active' : '' }}">
             <a href="/admin/carousel" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-image"></i>
                 <div data-i18n="Basic">Carousel</div>
             </a>
         </li>
 
-         {{-- News --}}
-         <li class="menu-item {{ (request()->is('admin/news')) ? 'open active' : '' }}">
+        {{-- News --}}
+        <li class="menu-item {{ request()->is('admin/news') ? 'open active' : '' }}">
             <a href="/admin/news" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-news"></i>
                 <div data-i18n="Basic">News</div>
             </a>
         </li>
 
+        {{-- Structure --}}
+        <li class="menu-item {{ request()->is('admin/structure ') ? 'open active' : '' }}">
+            <a href="/admin/structure" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-chart"></i>
+                <div data-i18n="Basic">Structure</div>
+            </a>
+        </li>
+
         {{-- About --}}
-        <li class="menu-item {{ (request()->is('admin/about')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/about') ? 'open active' : '' }}">
             <a href="/admin/about" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-conversation"></i>
                 <div data-i18n="Basic">About</div>
@@ -51,7 +60,7 @@
         </li>
 
         {{-- Why Choose --}}
-        <li class="menu-item {{ (request()->is('admin/whychoose')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/whychoose') ? 'open active' : '' }}">
             <a href="/admin/whychoose" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-question-mark"></i>
                 <div data-i18n="Basic">Why Choose</div>
@@ -59,7 +68,7 @@
         </li>
 
         {{-- service --}}
-        <li class="menu-item {{ (request()->is('admin/services*')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/services*') ? 'open active' : '' }}">
             <a href="/admin/services" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-car"></i>
                 <div data-i18n="Basic">Services</div>
@@ -67,7 +76,7 @@
         </li>
 
         {{-- Project --}}
-        <li class="menu-item {{ (request()->is('admin/project*')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/project*') ? 'open active' : '' }}">
             <a href="/admin/project" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-notepad"></i>
                 <div data-i18n="Basic">Project</div>
@@ -75,7 +84,7 @@
         </li>
 
         {{-- testimonial --}}
-        <li class="menu-item {{ (request()->is('admin/testimonial')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/testimonial') ? 'open active' : '' }}">
             <a href="/admin/testimonial" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Basic">Testimonial</div>
@@ -83,7 +92,7 @@
         </li>
 
         {{-- Client --}}
-        <li class="menu-item {{ (request()->is('admin/client*')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/client*') ? 'open active' : '' }}">
             <a href="/admin/client" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-flag"></i>
                 <div data-i18n="Basic">Client</div>
@@ -92,7 +101,7 @@
 
 
         {{-- profile perusahaan --}}
-        <li class="menu-item {{ (request()->is('admin/office-profile')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/office-profile') ? 'open active' : '' }}">
             <a href="/admin/office-profile" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-building"></i>
                 <div data-i18n="Basic">Profile PT</div>
@@ -100,7 +109,7 @@
         </li>
 
         <!-- contact -->
-        <li class="menu-item {{ (request()->is('admin/contact*')) ? 'open active' : '' }}">
+        <li class="menu-item {{ request()->is('admin/contact*') ? 'open active' : '' }}">
             <a href="/admin/contact" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-mail-send"></i>
                 <div data-i18n="Basic">Contact Message</div>
@@ -108,13 +117,13 @@
         </li>
 
         <!-- User interface -->
-        <li class="menu-item {{ (request()->is('admin/user*')) ? 'open active' : '' }} ">
+        <li class="menu-item {{ request()->is('admin/user*') ? 'open active' : '' }} ">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="User interface">Data Master</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item {{ (request()->is('admin/user*')) ? 'active' : '' }} ">
+                <li class="menu-item {{ request()->is('admin/user*') ? 'active' : '' }} ">
                     <a href="/admin/user" class="menu-link ">
                         <div data-i18n="Accordion">Users</div>
                     </a>

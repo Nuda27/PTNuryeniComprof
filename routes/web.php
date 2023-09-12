@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactAdminController;
@@ -77,7 +78,8 @@ Route::prefix('admin')->group(function () {
         // clients
         route::resource('/client', ClientController::class, ['as' => 'admin']);
 
-
+        //News
+        route::resource('/news', BeritaController::class, ['as' => 'admin']);
     });
 });
 

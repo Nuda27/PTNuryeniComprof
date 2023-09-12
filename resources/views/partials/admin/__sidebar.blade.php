@@ -34,6 +34,14 @@
             </a>
         </li>
 
+         {{-- News --}}
+         <li class="menu-item {{ (request()->is('admin/news')) ? 'open active' : '' }}">
+            <a href="/admin/news" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-news"></i>
+                <div data-i18n="Basic">News</div>
+            </a>
+        </li>
+
         {{-- About --}}
         <li class="menu-item {{ (request()->is('admin/about')) ? 'open active' : '' }}">
             <a href="/admin/about" class="menu-link">

@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Berita;
 use App\Models\Carousel;
 use App\Models\Client;
 use App\Models\Project;
 use App\Models\Services;
+use App\Models\Struktur;
 use App\Models\Testimoni;
+use App\Models\VisiMisi;
 use App\Models\Whychoose;
 use App\Models\whychooseDetail;
 
@@ -59,6 +62,46 @@ class LandingPageController extends Controller
         $services = Services::latest()->get();
 
         return view('pages.landingPage.service', compact('services'));
+    }
+
+    /**
+     * struktur
+     *
+     * @return void
+     */
+    public function struktur()
+    {
+        // get 1
+        $struktur = Struktur::first();
+        return view('pages.landingPage.struktur', compact('struktur'));
+    }
+
+    /**
+     * visiMisi
+     *
+     * @return void
+     */
+    public function visiMisi()
+    {
+        // get 1
+        $visiMisi = VisiMisi::first();
+        return view('pages.landingPage.visiMisi', compact('visiMisi'));
+    }
+
+    public function berita()
+    {
+        // get  data terbaru
+        $berita = Berita::latest()->get();
+
+        return view('pages.landingPage.berita', compact('berita'));
+    }
+
+    public function beritaDetail($id)
+    {
+        // get  data terbaru
+        $berita = Berita::latest()->get();
+
+        return view('pages.landingPage.berita-detail', compact('berita'));
     }
 
 }

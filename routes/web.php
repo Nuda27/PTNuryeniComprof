@@ -15,8 +15,8 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\StrukturController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\WhychooseController;
 use App\Http\Controllers\VisiMisiController;
+use App\Http\Controllers\WhychooseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -98,6 +98,13 @@ Route::get('/service', [LandingPageController::class, 'service'])->name('home.se
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('/struktur-organisasi', [LandingPageController::class, 'struktur'])->name('home.struktur');
+
+Route::get('/visi-misi', [LandingPageController::class, 'visiMisi'])->name('home.visiMisi');
+
+Route::get('/berita', [LandingPageController::class, 'berita'])->name('home.berita');
+Route::get('/berita/{id}', [LandingPageController::class, 'beritaDetail'])->name('home.berita.detail');
 
 
 require __DIR__ . '/auth.php';

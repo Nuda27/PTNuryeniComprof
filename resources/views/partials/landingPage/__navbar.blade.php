@@ -59,6 +59,7 @@
             <a href="/" class="nav-item nav-link {{ (request()->is('/')) ? 'active' : '' }}">Home</a>
             <a href="/#about" class="nav-item nav-link">About</a>
             <a href="/service" class="nav-item nav-link {{ (request()->is('service')) ? 'active' : '' }}">Services</a>
+            <a href="/struktur-organisasi" class="nav-item nav-link {{ (request()->is('struktur-organisasi')) ? 'active' : '' }}">Struktur Organisasi</a>
             <a href="/contact" class="nav-item nav-link {{ (request()->is('contact')) ? 'active' : '' }}">Contact</a>
         </div>
         {{-- <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a> --}}

@@ -104,5 +104,7 @@ Route::get('/struktur-organisasi', [LandingPageController::class, 'struktur'])->
 Route::get('/visi-misi', [LandingPageController::class, 'visiMisi'])->name('home.visiMisi');
 
 Route::get('/berita', [LandingPageController::class, 'berita'])->name('home.berita');
+Route::get('/berita/{id}', [LandingPageController::class, 'beritaDetail'])->name('home.berita.detail');
+
 
 require __DIR__ . '/auth.php';

@@ -59,6 +59,14 @@
             </a>
         </li>
 
+        {{-- Visi Misi --}}
+        <li class="menu-item {{ request()->is('admin/visimisi') ? 'open active' : '' }}">
+            <a href="/admin/visimisi" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-navigation"></i>
+                <div data-i18n="Basic">Visi Misi</div>
+            </a>
+        </li>
+
         {{-- Why Choose --}}
         <li class="menu-item {{ request()->is('admin/whychoose') ? 'open active' : '' }}">
             <a href="/admin/whychoose" class="menu-link">

@@ -16,9 +16,8 @@
 
 
     <!-- Favicon -->
-    {{--
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" /> --}}
-    <link rel="shortcut icon" href="{{ asset('assetsLanding/img/logo.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assetsLanding/img/logo.png') }}" />
+    {{-- <link rel="shortcut icon" href="{{ asset('assetsLanding/img/logo.png') }}"> --}}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

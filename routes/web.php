@@ -16,6 +16,7 @@ use App\Http\Controllers\StrukturController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WhychooseController;
+use App\Http\Controllers\VisiMisiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -84,6 +85,9 @@ Route::prefix('admin')->group(function () {
 
         //Struktur
         route::resource('/structure', StrukturController::class, ['as' => 'admin']);
+
+        //visimisi
+        route::resource('/visimisi', VisiMisiController::class, ['as' => 'admin']);
     });
 });
 

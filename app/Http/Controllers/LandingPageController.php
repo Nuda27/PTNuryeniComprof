@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Berita;
 use App\Models\Carousel;
 use App\Models\Client;
 use App\Models\Project;
@@ -85,6 +86,14 @@ class LandingPageController extends Controller
         // get 1
         $visiMisi = VisiMisi::first();
         return view('pages.landingPage.visiMisi', compact('visiMisi'));
+    }
+
+    public function berita()
+    {
+        // get  data terbaru
+        $berita = Berita::latest()->get();
+
+        return view('pages.landingPage.berita', compact('berita'));
     }
 
 }

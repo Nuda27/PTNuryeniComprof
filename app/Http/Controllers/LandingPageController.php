@@ -9,6 +9,7 @@ use App\Models\Project;
 use App\Models\Services;
 use App\Models\Struktur;
 use App\Models\Testimoni;
+use App\Models\VisiMisi;
 use App\Models\Whychoose;
 use App\Models\whychooseDetail;
 
@@ -72,6 +73,18 @@ class LandingPageController extends Controller
         // get 1
         $struktur = Struktur::first();
         return view('pages.landingPage.struktur', compact('struktur'));
+    }
+
+    /**
+     * visiMisi
+     *
+     * @return void
+     */
+    public function visiMisi()
+    {
+        // get 1
+        $visiMisi = VisiMisi::first();
+        return view('pages.landingPage.visiMisi', compact('visiMisi'));
     }
 
 }

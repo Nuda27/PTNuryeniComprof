@@ -57,9 +57,15 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="/" class="nav-item nav-link {{ (request()->is('/')) ? 'active' : '' }}">Home</a>
-            <a href="/#about" class="nav-item nav-link">About</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle {{ (request()->is('struktur-organisasi', 'visi-misi')) ? 'active' : '' }}" data-bs-toggle="dropdown">About</a>
+                <div class="dropdown-menu bg-light m-0">
+                    <a href="/#about" class="dropdown-item">About</a>
+                    <a href="/visi-misi" class="dropdown-item {{ (request()->is('visi-misi')) ? 'active' : '' }}">Visi Misi</a>
+                    <a href="/struktur-organisasi" class="dropdown-item {{ (request()->is('struktur-organisasi')) ? 'active' : '' }}">Struktur Organisasi</a>
+                </div>
+            </div>
             <a href="/service" class="nav-item nav-link {{ (request()->is('service')) ? 'active' : '' }}">Services</a>
-            <a href="/struktur-organisasi" class="nav-item nav-link {{ (request()->is('struktur-organisasi')) ? 'active' : '' }}">Struktur Organisasi</a>
             <a href="/contact" class="nav-item nav-link {{ (request()->is('contact')) ? 'active' : '' }}">Contact</a>
         </div>
         {{-- <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a> --}}

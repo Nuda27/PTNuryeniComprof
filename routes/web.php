@@ -101,4 +101,6 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/struktur-organisasi', [LandingPageController::class, 'struktur'])->name('home.struktur');
 
+Route::get('/visi-misi', [LandingPageController::class, 'visiMisi'])->name('home.visiMisi');
+
 require __DIR__ . '/auth.php';

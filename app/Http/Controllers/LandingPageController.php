@@ -99,9 +99,12 @@ class LandingPageController extends Controller
     public function beritaDetail($id)
     {
         // get  data terbaru
-        $berita = Berita::latest()->get();
+        $berita = Berita::findOrFail($id);
 
-        return view('pages.landingPage.berita-detail', compact('berita'));
+        // get 3 data terbaru
+        $terbaru = Berita::latest()->limit('3')->get();
+
+        return view('pages.landingPage.berita-detail', compact('berita', 'terbaru'));
     }
 
 }

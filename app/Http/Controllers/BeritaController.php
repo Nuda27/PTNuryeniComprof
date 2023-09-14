@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
-use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\File;
+use Yajra\DataTables\DataTables;
 
 class BeritaController extends Controller
 {
@@ -16,6 +16,9 @@ class BeritaController extends Controller
 
             return DataTables::of($data)
                 ->addIndexColumn()
+                ->editColumn('title', function ($row) {
+                    return '<p class="white-space">' . $row->title . '</p>';
+                })
                 ->editColumn('description', function ($row) {
                     return '<p class="white-space">' . $row->description . '</p>';
                 })
@@ -37,7 +40,7 @@ class BeritaController extends Controller
                     ';
                     return $btn;
                 })
-                ->rawColumns(['action', 'file', 'description'])
+                ->rawColumns(['action', 'file', 'description', 'title'])
                 ->make(true);
         }
         return view('pages.admin.berita.index');
@@ -52,7 +55,7 @@ class BeritaController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'description' => 'required|max:255',
+            'description' => 'required',
             'file' => 'required',
         ]);
 
@@ -90,7 +93,7 @@ class BeritaController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'description' => 'required|max:255',
+            'description' => 'required',
             'file' => '',
         ]);
 

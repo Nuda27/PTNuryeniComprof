@@ -26,15 +26,14 @@ Nuryeni | Solution To All Your Problems
                     </div>
                     <div class="blog__details-left-content mb-40">
                         <ul>
-                            <li class="mr-30"><i class="flaticon-user"></i>22 Maret 2023</li>
+                            <li class="mr-30">
+                                <i class="fa fa-clock"></i>
+                                22 Maret 2023
+                            </li>
                         </ul>
                         <h3 class="mb-15">Make sure you have your business plan ready</h3>
                         <p class="mb-40">Aliquam vel sapien at risus bibendum tempor ut nec ligula. Vestibulum tortor tortor, ornare nec tincidunt vel, luctus ac nisi. Nam fringilla auctor erat. Pellentesque consectetur nisl a lobortis dapibus. Sed a diam at augue cursus tempor. Morbi euismod tristique lectus, ut finibus eros. Donec non purus sem. Mauris eget feugiat felis, nec egestas lacus. Donec lobortis finibus erat, id aliquet ante dapibus vitae. Proin elementum nisi metus, vitae fermentum lorem mollis eu.</p>
                         <p class="mb-20">Mauris aliquam ante id eros viverra, sed convallis metus accumsan. Donec condimentum enim vel tristique tincidunt. Nullam lacus lorem, ultricies at dictum at, malesuada ut dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada </p>
-                        <div class="blog__details-left-content-box mb-20">
-                            <h6 class="mb-15">A business is defined as an organization or enterprising entity engaged in commercial, industrial, or professional activities.</h6>
-                            <span>michele morrone</span>
-                        </div>
                         <p>Donec scelerisque ex arcu. Cras commodo auctor tortor, quis euismod sapien tincidunt non. Pellentesque aliquam sem in tellus fringilla interdum. Integer nec ex magna. Ut urna urna, blandit quis mi ac, elementum molestie turpis. Integer mattis turpis id quam volutpat egestas. Nulla sagittis ligula a augue semper sagittis.</p>
                     </div>
                 </div>
@@ -46,11 +45,7 @@ Nuryeni | Solution To All Your Problems
                         <div class="blog__sidebar-item-post d-flex align-items-center pb-15 mb-3">
                             <div class="blog__sidebar-item-post-thumb mb-2">
                                 <a href="blog-details.html">
-                                    <img src="{{ asset('assetsLanding/img/placeholder.jpg') }}" alt="" style="  object-fit: cover;
-            object-position: center;
-            height: 83px;
-            width: 83px;">
-
+                                    <img src="{{ asset('assetsLanding/img/placeholder.jpg') }}" alt="">
                                 </a>
                             </div>
                             <div class="blog__sidebar-item-post-content">
@@ -61,10 +56,7 @@ Nuryeni | Solution To All Your Problems
                         <div class="blog__sidebar-item-post d-flex align-items-center pb-15 mb-3">
                             <div class="blog__sidebar-item-post-thumb mb-2">
                                 <a href="blog-details.html">
-                                    <img src="{{ asset('assetsLanding/img/about-1.jpg') }}" alt="" style="  object-fit: cover;
-            object-position: center;
-            height: 83px;
-            width: 83px;">
+                                    <img src="{{ asset('assetsLanding/img/about-1.jpg') }}" alt="">
                                 </a>
 
                             </div>

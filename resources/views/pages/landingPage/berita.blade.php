@@ -21,7 +21,7 @@ Nuryeni | Solution To All Your Problems
 
 <!-- Blog Area Start -->
 @if(count($berita) > 0)
-<div class="container-xxl blog__area section-padding">
+<div class="container-xxl blog__area section-padding mb-5">
     <div class="container">
         <div class="row">
 
@@ -51,6 +51,7 @@ Nuryeni | Solution To All Your Problems
                 </div>
             </div>
             @endforeach
+            {!! $berita->withQueryString()->links('pagination::bootstrap-5') !!}
 
         </div>
     </div>

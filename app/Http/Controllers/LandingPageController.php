@@ -59,7 +59,7 @@ class LandingPageController extends Controller
     public function service()
     {
         // get 3 data terbaru service
-        $services = Services::latest()->get();
+        $services = Services::latest()->paginate('6');
 
         return view('pages.landingPage.service', compact('services'));
     }

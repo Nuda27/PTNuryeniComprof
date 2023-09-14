@@ -30,15 +30,11 @@ Nuryeni | Solution To All Your Problems
         <div class="row gy-5 gx-4">
 
             @foreach ($services as $service)
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-md-6 col-lg-4 wow fadeInUp mb-4" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <img class="img-fluid service-img-cover"
-                        src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
-                        alt="service">
+                    <img class="img-fluid service-img-cover" src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="service">
                     <div class="service-img">
-                        <img class="img-fluid"
-                            src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}"
-                            alt="service">
+                        <img class="img-fluid" src="{{ $service->file ? asset($service->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="service">
                     </div>
                     <div class="service-detail">
                         <div class="service-title">
@@ -54,6 +50,9 @@ Nuryeni | Solution To All Your Problems
                 </div>
             </div>
             @endforeach
+
+            {!! $services->withQueryString()->links('pagination::bootstrap-5') !!}
+
         </div>
     </div>
 </div>

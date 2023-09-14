@@ -20,33 +20,43 @@ Nuryeni | Solution To All Your Problems
 <!-- Page Header End -->
 
 <!-- Blog Area Start -->
-<div class="container-xxl blog__area section-padding">
+@if(count($berita) > 0)
+<div class="container-xxl blog__area section-padding mb-5">
     <div class="container">
         <div class="row">
 
+            @foreach ($berita as $data)
             <div class="col-xl-4 col-lg-4 col-md-6 md-mb-30 mb-4">
                 <div class="blog__area-item wow fadeInUp" data-wow-delay="0.8s">
                     <div class="blog__area-item-image">
-                        <img src="{{ asset('assetsLanding/img/about-1.jpg') }}" alt="" class="img-fluid">
+                        <img src="{{ $data->file ? asset($data->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="" class="img-fluid">
                     </div>
                     <div class="blog__area-item-content pt-0">
                         <div class="blog__area-item-content-date">
-                            <span><i class="flaticon-calendar"></i>19 Feb, 2022</span>
+                            <span><i class="flaticon-calendar"></i>
+                                {{ \Carbon\Carbon::parse($data->created_at)->format('d F Y') }}
+                            </span>
                         </div>
-                        <h3><a href="#">Business Liability Insurance Providers</a></h3>
+                        <h3>
+                            <a href="/berita/{{ $data->id }}">
+                                {{ \Illuminate\Support\Str::limit($data->title, 42) }}
+                            </a>
+                        </h3>
                         <ul>
                         </ul>
                         <div class="blog__area-item-content-btn">
-                            <a href="#">Baca Selengkapnya</a>
+                            <a href="/berita/{{ $data->id }}">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
+            {!! $berita->withQueryString()->links('pagination::bootstrap-5') !!}
 
         </div>
-
     </div>
 </div>
+@endif
 <!-- Blog Area End -->
 
 

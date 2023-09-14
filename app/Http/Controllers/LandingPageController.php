@@ -59,7 +59,7 @@ class LandingPageController extends Controller
     public function service()
     {
         // get 3 data terbaru service
-        $services = Services::latest()->get();
+        $services = Services::latest()->paginate('6');
 
         return view('pages.landingPage.service', compact('services'));
     }
@@ -91,7 +91,7 @@ class LandingPageController extends Controller
     public function berita()
     {
         // get  data terbaru
-        $berita = Berita::latest()->get();
+        $berita = Berita::latest()->paginate('6');
 
         return view('pages.landingPage.berita', compact('berita'));
     }
@@ -99,9 +99,12 @@ class LandingPageController extends Controller
     public function beritaDetail($id)
     {
         // get  data terbaru
-        $berita = Berita::latest()->get();
+        $berita = Berita::findOrFail($id);
 
-        return view('pages.landingPage.berita-detail', compact('berita'));
+        // get 3 data terbaru
+        $terbaru = Berita::latest()->limit('3')->get();
+
+        return view('pages.landingPage.berita-detail', compact('berita', 'terbaru'));
     }
 
 }

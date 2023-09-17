@@ -27,9 +27,9 @@ Nuryeni | Solution To All Your Problems
             {{-- <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p> --}}
             <h1 class="display-5 mb-4">Struktur Organisasi</h1>
         </div>
-        <div class="row gy-5 gx-4">
+        <div class="row">
             <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                <img src="{{ $struktur->file ? asset($struktur->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="" class="img-fluid">
+                <img src="{{ $struktur->file ? asset($struktur->file) : asset('assetsLanding/img/placeholder.jpg') }}" alt="" class="" width="100%">
             </div>
         </div>
     </div>
